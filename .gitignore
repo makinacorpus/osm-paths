@@ -1,7 +1,5 @@
 /cache/
 .idea/
-__pycache__/
-download/__pycache__
-download/tests/__pycache__
-env/
-
+**/__pycache__/
+/env/
+*.pyc

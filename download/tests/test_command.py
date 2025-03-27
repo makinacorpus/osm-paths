@@ -10,7 +10,7 @@ from . import mocked_osm_paths_to_geojson
 
 @mock.patch('download.osm_to_geojson.osm_paths_to_geojson', mocked_osm_paths_to_geojson)
 class CommandTest(SimpleTestCase):
-    filename = "./tests.geojson"
+    filename = os.path.join(os.path.dirname(__file__), 'data', 'test.geojson')
 
     # ---------- BBOX ARGUMENT ----------
     def test_standard_arguments(self):
@@ -86,7 +86,8 @@ class CommandTest(SimpleTestCase):
 
     # ---------- FILENAME ARGUMENT ----------
     def test_filename_missing_extension(self):
-        arguments = [1.0965738048514198, 42.91887785089727, 1.118439172740824, 42.92538304213781, "./tests", '-n',
+        filename_without_extension = os.path.join(os.path.dirname(__file__), 'data', 'test')
+        arguments = [1.0965738048514198, 42.91887785089727, 1.118439172740824, 42.92538304213781, filename_without_extension, '-n',
                      "all"]
 
         call_command('download', arguments)
