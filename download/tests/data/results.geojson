@@ -1,0 +1,1665 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "id": "(620817937, 1982987658, 0)",
+            "type": "Feature",
+            "properties": {
+                "osmid": 187665729,
+                "highway": "residential",
+                "name": "Impasse des Maillos",
+                "oneway": false,
+                "reversed": false,
+                "length": 17.68388846367663,
+                "maxspeed": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        1.1353614,
+                        42.9856741
+                    ],
+                    [
+                        1.1355776,
+                        42.9856574
+                    ]
+                ]
+            }
+        },
+        {
+            "id": "(620817937, 2103989710, 0)",
+            "type": "Feature",
+            "properties": {
+                "osmid": 48918782,
+                "highway": "residential",
+                "name": "All\u00e9e du Bousquet",
+                "oneway": false,
+                "reversed": true,
+                "length": 211.0058674830488,
+                "maxspeed": "50"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        1.1353614,
+                        42.9856741
+                    ],
+                    [
+                        1.1352783,
+                        42.9859712
+                    ],
+                    [
+                        1.1352694,
+                        42.9860394
+                    ],
+                    [
+                        1.1353251,
+                        42.9861024
+                    ],
+                    [
+                        1.1354405,
+                        42.986146
+                    ],
+                    [
+                        1.1356829,
+                        42.986169
+                    ],
+                    [
+                        1.1360817,
+                        42.9862163
+                    ],
+                    [
+                        1.1364495,
+                        42.9862625
+                    ],
+                    [
+                        1.1365445,
+                        42.9862927
+                    ],
+                    [
+                        1.1366173,
+                        42.9863619
+                    ],
+                    [
+                        1.1366253,
+                        42.9865256
+                    ],
+                    [
+                        1.1366581,
+                        42.98675
+                    ],
+                    [
+                        1.1367071,
+                        42.9867929
+                    ]
+                ]
+            }
+        },
+        {
+            "id": "(620817937, 1976322147, 0)",
+            "type": "Feature",
+            "properties": {
+                "osmid": 421435718,
+                "highway": "residential",
+                "name": "Chemin des Maillos",
+                "oneway": false,
+                "reversed": true,
+                "length": 98.69837743780158,
+                "maxspeed": "50"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        1.1353614,
+                        42.9856741
+                    ],
+                    [
+                        1.1347261,
+                        42.9855378
+                    ],
+                    [
+                        1.1345945,
+                        42.9855096
+                    ],
+                    [
+                        1.1341931,
+                        42.9854349
+                    ]
+                ]
+            }
+        },
+        {
+            "id": "(620821942, 620832912, 0)",
+            "type": "Feature",
+            "properties": {
+                "osmid": 200414783,
+                "highway": "residential",
+                "name": "Rue Parmentier",
+                "oneway": false,
+                "reversed": false,
+                "length": 128.53016673782327,
+                "maxspeed": "50"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        1.1310311,
+                        42.9836227
+                    ],
+                    [
+                        1.1312107,
+                        42.9837837
+                    ],
+                    [
+                        1.1314301,
+                        42.9839819
+                    ],
+                    [
+                        1.1320157,
+                        42.9845267
+                    ]
+                ]
+            }
+        },
+        {
+            "id": "(620821952, 1982545022, 0)",
+            "type": "Feature",
+            "properties": {
+                "osmid": 48917798,
+                "highway": "residential",
+                "name": "Rue Nicolas Boileau",
+                "oneway": false,
+                "reversed": false,
+                "length": 77.6285197368785,
+                "maxspeed": "50"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        1.1310726,
+                        42.9858006
+                    ],
+                    [
+                        1.1317918,
+                        42.9853417
+                    ]
+                ]
+            }
+        },
+        {
+            "id": "(620821952, 620821953, 0)",
+            "type": "Feature",
+            "properties": {
+                "osmid": 48918781,
+                "highway": "residential",
+                "name": "Avenue Alfred de Musset",
+                "oneway": false,
+                "reversed": false,
+                "length": 15.904571636790706,
+                "maxspeed": "50"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        1.1310726,
+                        42.9858006
+                    ],
+                    [
+                        1.1311562,
+                        42.9859299
+                    ]
+                ]
+            }
+        },
+        {
+            "id": "(620821952, 1976322136, 0)",
+            "type": "Feature",
+            "properties": {
+                "osmid": 48918781,
+                "highway": "residential",
+                "name": "Avenue Alfred de Musset",
+                "oneway": false,
+                "reversed": true,
+                "length": 63.61693577526832,
+                "maxspeed": "50"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        1.1310726,
+                        42.9858006
+                    ],
+                    [
+                        1.1306485,
+                        42.9853199
+                    ]
+                ]
+            }
+        },
+        {
+            "id": "(620821953, 620821952, 0)",
+            "type": "Feature",
+            "properties": {
+                "osmid": 48918781,
+                "highway": "residential",
+                "name": "Avenue Alfred de Musset",
+                "oneway": false,
+                "reversed": true,
+                "length": 15.904571636790706,
+                "maxspeed": "50"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        1.1311562,
+                        42.9859299
+                    ],
+                    [
+                        1.1310726,
+                        42.9858006
+                    ]
+                ]
+            }
+        },
+        {
+            "id": "(620821953, 2103965144, 0)",
+            "type": "Feature",
+            "properties": {
+                "osmid": 186884897,
+                "highway": "residential",
+                "name": "Avenue Rhin et Danube",
+                "oneway": false,
+                "reversed": false,
+                "length": 134.25147470027935,
+                "maxspeed": "50"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        1.1311562,
+                        42.9859299
+                    ],
+                    [
+                        1.1312934,
+                        42.9861379
+                    ],
+                    [
+                        1.131378,
+                        42.9862646
+                    ],
+                    [
+                        1.131526,
+                        42.9864309
+                    ],
+                    [
+                        1.1318185,
+                        42.9867497
+                    ],
+                    [
+                        1.1318963,
+                        42.9868345
+                    ],
+                    [
+                        1.1319708,
+                        42.9869752
+                    ]
+                ]
+            }
+        },
+        {
+            "id": "(620821953, 1976322204, 0)",
+            "type": "Feature",
+            "properties": {
+                "osmid": 187622117,
+                "highway": "residential",
+                "name": "Rue George Sand",
+                "oneway": false,
+                "reversed": false,
+                "length": 230.14423492404632,
+                "maxspeed": "50"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        1.1311562,
+                        42.9859299
+                    ],
+                    [
+                        1.1302728,
+                        42.986377
+                    ],
+                    [
+                        1.1296291,
+                        42.986692
+                    ],
+                    [
+                        1.128883,
+                        42.9871576
+                    ]
+                ]
+            }
+        },
+        {
+            "id": "(620821957, 1982545022, 0)",
+            "type": "Feature",
+            "properties": {
+                "osmid": 48917798,
+                "highway": "residential",
+                "name": "Rue Nicolas Boileau",
+                "oneway": false,
+                "reversed": true,
+                "length": 81.97771131652857,
+                "maxspeed": "50"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        1.1325513,
+                        42.9848571
+                    ],
+                    [
+                        1.1317918,
+                        42.9853417
+                    ]
+                ]
+            }
+        },
+        {
+            "id": "(620821957, 620832912, 0)",
+            "type": "Feature",
+            "properties": {
+                "osmid": 200414783,
+                "highway": "residential",
+                "name": "Rue Parmentier",
+                "oneway": false,
+                "reversed": true,
+                "length": 56.99328479971874,
+                "maxspeed": "50"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        1.1325513,
+                        42.9848571
+                    ],
+                    [
+                        1.1322067,
+                        42.9846411
+                    ],
+                    [
+                        1.1320157,
+                        42.9845267
+                    ]
+                ]
+            }
+        },
+        {
+            "id": "(620821957, 620832928, 0)",
+            "type": "Feature",
+            "properties": {
+                "osmid": 421435718,
+                "highway": "residential",
+                "name": "Chemin des Maillos",
+                "oneway": false,
+                "reversed": false,
+                "length": 82.13171260979084,
+                "maxspeed": "50"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        1.1325513,
+                        42.9848571
+                    ],
+                    [
+                        1.1330738,
+                        42.9851222
+                    ],
+                    [
+                        1.1334065,
+                        42.9852469
+                    ]
+                ]
+            }
+        },
+        {
+            "id": "(620832903, 620832912, 0)",
+            "type": "Feature",
+            "properties": {
+                "osmid": 48918780,
+                "highway": "residential",
+                "name": "Impasse Parmentier",
+                "oneway": false,
+                "reversed": true,
+                "length": 46.05434091898044,
+                "maxspeed": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        1.1315702,
+                        42.9847823
+                    ],
+                    [
+                        1.1320157,
+                        42.9845267
+                    ]
+                ]
+            }
+        },
+        {
+            "id": "(620832912, 620832903, 0)",
+            "type": "Feature",
+            "properties": {
+                "osmid": 48918780,
+                "highway": "residential",
+                "name": "Impasse Parmentier",
+                "oneway": false,
+                "reversed": false,
+                "length": 46.05434091898044,
+                "maxspeed": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        1.1320157,
+                        42.9845267
+                    ],
+                    [
+                        1.1315702,
+                        42.9847823
+                    ]
+                ]
+            }
+        },
+        {
+            "id": "(620832912, 620821957, 0)",
+            "type": "Feature",
+            "properties": {
+                "osmid": 200414783,
+                "highway": "residential",
+                "name": "Rue Parmentier",
+                "oneway": false,
+                "reversed": false,
+                "length": 56.99328479971874,
+                "maxspeed": "50"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        1.1320157,
+                        42.9845267
+                    ],
+                    [
+                        1.1322067,
+                        42.9846411
+                    ],
+                    [
+                        1.1325513,
+                        42.9848571
+                    ]
+                ]
+            }
+        },
+        {
+            "id": "(620832912, 620821942, 0)",
+            "type": "Feature",
+            "properties": {
+                "osmid": 200414783,
+                "highway": "residential",
+                "name": "Rue Parmentier",
+                "oneway": false,
+                "reversed": true,
+                "length": 128.53016673782327,
+                "maxspeed": "50"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        1.1320157,
+                        42.9845267
+                    ],
+                    [
+                        1.1314301,
+                        42.9839819
+                    ],
+                    [
+                        1.1312107,
+                        42.9837837
+                    ],
+                    [
+                        1.1310311,
+                        42.9836227
+                    ]
+                ]
+            }
+        },
+        {
+            "id": "(620832928, 620832936, 0)",
+            "type": "Feature",
+            "properties": {
+                "osmid": 48918783,
+                "highway": "residential",
+                "name": "Chemin de Bethmale",
+                "oneway": false,
+                "reversed": false,
+                "length": 120.12484502328117,
+                "maxspeed": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        1.1334065,
+                        42.9852469
+                    ],
+                    [
+                        1.1337578,
+                        42.9851945
+                    ],
+                    [
+                        1.1338218,
+                        42.9851815
+                    ],
+                    [
+                        1.1338721,
+                        42.9851523
+                    ],
+                    [
+                        1.1338839,
+                        42.9851288
+                    ],
+                    [
+                        1.133874,
+                        42.9850989
+                    ],
+                    [
+                        1.1337449,
+                        42.9850141
+                    ],
+                    [
+                        1.1336137,
+                        42.9849216
+                    ],
+                    [
+                        1.1335852,
+                        42.9848997
+                    ],
+                    [
+                        1.1335683,
+                        42.9848673
+                    ],
+                    [
+                        1.1335653,
+                        42.9848378
+                    ],
+                    [
+                        1.1335752,
+                        42.9848094
+                    ],
+                    [
+                        1.1336181,
+                        42.9847862
+                    ],
+                    [
+                        1.1336928,
+                        42.9847801
+                    ],
+                    [
+                        1.133802,
+                        42.9847739
+                    ],
+                    [
+                        1.1338939,
+                        42.9847682
+                    ],
+                    [
+                        1.1339486,
+                        42.9847591
+                    ]
+                ]
+            }
+        },
+        {
+            "id": "(620832928, 2103964606, 0)",
+            "type": "Feature",
+            "properties": {
+                "osmid": 421435718,
+                "highway": "residential",
+                "name": "Chemin des Maillos",
+                "oneway": false,
+                "reversed": false,
+                "length": 20.39670686609548,
+                "maxspeed": "50"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        1.1334065,
+                        42.9852469
+                    ],
+                    [
+                        1.1335571,
+                        42.9852963
+                    ],
+                    [
+                        1.133615,
+                        42.9853135
+                    ],
+                    [
+                        1.1336365,
+                        42.9853199
+                    ]
+                ]
+            }
+        },
+        {
+            "id": "(620832928, 620821957, 0)",
+            "type": "Feature",
+            "properties": {
+                "osmid": 421435718,
+                "highway": "residential",
+                "name": "Chemin des Maillos",
+                "oneway": false,
+                "reversed": true,
+                "length": 82.13171260979084,
+                "maxspeed": "50"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        1.1334065,
+                        42.9852469
+                    ],
+                    [
+                        1.1330738,
+                        42.9851222
+                    ],
+                    [
+                        1.1325513,
+                        42.9848571
+                    ]
+                ]
+            }
+        },
+        {
+            "id": "(620832936, 620832928, 0)",
+            "type": "Feature",
+            "properties": {
+                "osmid": 48918783,
+                "highway": "residential",
+                "name": "Chemin de Bethmale",
+                "oneway": false,
+                "reversed": true,
+                "length": 120.12484502328113,
+                "maxspeed": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        1.1339486,
+                        42.9847591
+                    ],
+                    [
+                        1.1338939,
+                        42.9847682
+                    ],
+                    [
+                        1.133802,
+                        42.9847739
+                    ],
+                    [
+                        1.1336928,
+                        42.9847801
+                    ],
+                    [
+                        1.1336181,
+                        42.9847862
+                    ],
+                    [
+                        1.1335752,
+                        42.9848094
+                    ],
+                    [
+                        1.1335653,
+                        42.9848378
+                    ],
+                    [
+                        1.1335683,
+                        42.9848673
+                    ],
+                    [
+                        1.1335852,
+                        42.9848997
+                    ],
+                    [
+                        1.1336137,
+                        42.9849216
+                    ],
+                    [
+                        1.1337449,
+                        42.9850141
+                    ],
+                    [
+                        1.133874,
+                        42.9850989
+                    ],
+                    [
+                        1.1338839,
+                        42.9851288
+                    ],
+                    [
+                        1.1338721,
+                        42.9851523
+                    ],
+                    [
+                        1.1338218,
+                        42.9851815
+                    ],
+                    [
+                        1.1337578,
+                        42.9851945
+                    ],
+                    [
+                        1.1334065,
+                        42.9852469
+                    ]
+                ]
+            }
+        },
+        {
+            "id": "(1976322131, 1976322158, 0)",
+            "type": "Feature",
+            "properties": {
+                "osmid": 186884916,
+                "highway": "residential",
+                "name": "Rue Fran\u00e7ois Villon",
+                "oneway": false,
+                "reversed": true,
+                "length": 47.14815996298669,
+                "maxspeed": "50"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        1.1298315,
+                        42.9852336
+                    ],
+                    [
+                        1.1301877,
+                        42.9855681
+                    ]
+                ]
+            }
+        },
+        {
+            "id": "(1976322136, 620821952, 0)",
+            "type": "Feature",
+            "properties": {
+                "osmid": 48918781,
+                "highway": "residential",
+                "name": "Avenue Alfred de Musset",
+                "oneway": false,
+                "reversed": false,
+                "length": 63.61693577526832,
+                "maxspeed": "50"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        1.1306485,
+                        42.9853199
+                    ],
+                    [
+                        1.1310726,
+                        42.9858006
+                    ]
+                ]
+            }
+        },
+        {
+            "id": "(1976322136, 1976322158, 0)",
+            "type": "Feature",
+            "properties": {
+                "osmid": 186884922,
+                "highway": "residential",
+                "name": "Rue Fran\u00e7ois Villon",
+                "oneway": false,
+                "reversed": false,
+                "length": 46.54697121085658,
+                "maxspeed": "50"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        1.1306485,
+                        42.9853199
+                    ],
+                    [
+                        1.1301877,
+                        42.9855681
+                    ]
+                ]
+            }
+        },
+        {
+            "id": "(1976322136, 2103894735, 0)",
+            "type": "Feature",
+            "properties": {
+                "osmid": 48918781,
+                "highway": "residential",
+                "name": "Avenue Alfred de Musset",
+                "oneway": false,
+                "reversed": true,
+                "length": 116.12902205094049,
+                "maxspeed": "50"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        1.1306485,
+                        42.9853199
+                    ],
+                    [
+                        1.1301471,
+                        42.9847949
+                    ],
+                    [
+                        1.1298894,
+                        42.9845249
+                    ],
+                    [
+                        1.1298324,
+                        42.984463
+                    ]
+                ]
+            }
+        },
+        {
+            "id": "(1976322147, 1976322171, 0)",
+            "type": "Feature",
+            "properties": {
+                "osmid": 186884907,
+                "highway": "residential",
+                "name": "Impasse Arthur Rimbaud",
+                "oneway": false,
+                "reversed": false,
+                "length": 88.1381803034475,
+                "maxspeed": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        1.1341931,
+                        42.9854349
+                    ],
+                    [
+                        1.1338073,
+                        42.9861756
+                    ]
+                ]
+            }
+        },
+        {
+            "id": "(1976322147, 620817937, 0)",
+            "type": "Feature",
+            "properties": {
+                "osmid": 421435718,
+                "highway": "residential",
+                "name": "Chemin des Maillos",
+                "oneway": false,
+                "reversed": false,
+                "length": 98.69837743780158,
+                "maxspeed": "50"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        1.1341931,
+                        42.9854349
+                    ],
+                    [
+                        1.1345945,
+                        42.9855096
+                    ],
+                    [
+                        1.1347261,
+                        42.9855378
+                    ],
+                    [
+                        1.1353614,
+                        42.9856741
+                    ]
+                ]
+            }
+        },
+        {
+            "id": "(1976322147, 2103964606, 0)",
+            "type": "Feature",
+            "properties": {
+                "osmid": 421435718,
+                "highway": "residential",
+                "name": "Chemin des Maillos",
+                "oneway": false,
+                "reversed": true,
+                "length": 47.06784626765269,
+                "maxspeed": "50"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        1.1341931,
+                        42.9854349
+                    ],
+                    [
+                        1.1340373,
+                        42.9854059
+                    ],
+                    [
+                        1.1336677,
+                        42.9853292
+                    ],
+                    [
+                        1.1336365,
+                        42.9853199
+                    ]
+                ]
+            }
+        },
+        {
+            "id": "(1976322158, 1976322131, 0)",
+            "type": "Feature",
+            "properties": {
+                "osmid": 186884916,
+                "highway": "residential",
+                "name": "Rue Fran\u00e7ois Villon",
+                "oneway": false,
+                "reversed": false,
+                "length": 47.14815996298669,
+                "maxspeed": "50"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        1.1301877,
+                        42.9855681
+                    ],
+                    [
+                        1.1298315,
+                        42.9852336
+                    ]
+                ]
+            }
+        },
+        {
+            "id": "(1976322158, 2779945867, 0)",
+            "type": "Feature",
+            "properties": {
+                "osmid": 186884922,
+                "highway": "residential",
+                "name": "Rue Fran\u00e7ois Villon",
+                "oneway": false,
+                "reversed": false,
+                "length": 4.543073542480556,
+                "maxspeed": "50"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        1.1301877,
+                        42.9855681
+                    ],
+                    [
+                        1.1301427,
+                        42.9855923
+                    ]
+                ]
+            }
+        },
+        {
+            "id": "(1976322158, 1976322136, 0)",
+            "type": "Feature",
+            "properties": {
+                "osmid": 186884922,
+                "highway": "residential",
+                "name": "Rue Fran\u00e7ois Villon",
+                "oneway": false,
+                "reversed": true,
+                "length": 46.54697121085658,
+                "maxspeed": "50"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        1.1301877,
+                        42.9855681
+                    ],
+                    [
+                        1.1306485,
+                        42.9853199
+                    ]
+                ]
+            }
+        },
+        {
+            "id": "(1976322166, 2779945867, 0)",
+            "type": "Feature",
+            "properties": {
+                "osmid": 186884922,
+                "highway": "residential",
+                "name": "Rue Fran\u00e7ois Villon",
+                "oneway": false,
+                "reversed": true,
+                "length": 42.443621587753924,
+                "maxspeed": "50"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        1.1297225,
+                        42.9858186
+                    ],
+                    [
+                        1.1301427,
+                        42.9855923
+                    ]
+                ]
+            }
+        },
+        {
+            "id": "(1976322171, 1976322147, 0)",
+            "type": "Feature",
+            "properties": {
+                "osmid": 186884907,
+                "highway": "residential",
+                "name": "Impasse Arthur Rimbaud",
+                "oneway": false,
+                "reversed": true,
+                "length": 88.1381803034475,
+                "maxspeed": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        1.1338073,
+                        42.9861756
+                    ],
+                    [
+                        1.1341931,
+                        42.9854349
+                    ]
+                ]
+            }
+        },
+        {
+            "id": "(1976322204, 620821953, 0)",
+            "type": "Feature",
+            "properties": {
+                "osmid": 187622117,
+                "highway": "residential",
+                "name": "Rue George Sand",
+                "oneway": false,
+                "reversed": true,
+                "length": 230.14423492404632,
+                "maxspeed": "50"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        1.128883,
+                        42.9871576
+                    ],
+                    [
+                        1.1296291,
+                        42.986692
+                    ],
+                    [
+                        1.1302728,
+                        42.986377
+                    ],
+                    [
+                        1.1311562,
+                        42.9859299
+                    ]
+                ]
+            }
+        },
+        {
+            "id": "(1982545021, 1982545022, 0)",
+            "type": "Feature",
+            "properties": {
+                "osmid": 187622118,
+                "highway": "residential",
+                "name": "Impasse Fran\u00e7ois Rabelais",
+                "oneway": false,
+                "reversed": true,
+                "length": 55.96212358504083,
+                "maxspeed": "50"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        1.1313458,
+                        42.9849585
+                    ],
+                    [
+                        1.1317918,
+                        42.9853417
+                    ]
+                ]
+            }
+        },
+        {
+            "id": "(1982545022, 620821957, 0)",
+            "type": "Feature",
+            "properties": {
+                "osmid": 48917798,
+                "highway": "residential",
+                "name": "Rue Nicolas Boileau",
+                "oneway": false,
+                "reversed": false,
+                "length": 81.97771131652857,
+                "maxspeed": "50"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        1.1317918,
+                        42.9853417
+                    ],
+                    [
+                        1.1325513,
+                        42.9848571
+                    ]
+                ]
+            }
+        },
+        {
+            "id": "(1982545022, 620821952, 0)",
+            "type": "Feature",
+            "properties": {
+                "osmid": 48917798,
+                "highway": "residential",
+                "name": "Rue Nicolas Boileau",
+                "oneway": false,
+                "reversed": true,
+                "length": 77.6285197368785,
+                "maxspeed": "50"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        1.1317918,
+                        42.9853417
+                    ],
+                    [
+                        1.1310726,
+                        42.9858006
+                    ]
+                ]
+            }
+        },
+        {
+            "id": "(1982545022, 1982545021, 0)",
+            "type": "Feature",
+            "properties": {
+                "osmid": 187622118,
+                "highway": "residential",
+                "name": "Impasse Fran\u00e7ois Rabelais",
+                "oneway": false,
+                "reversed": false,
+                "length": 55.96212358504083,
+                "maxspeed": "50"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        1.1317918,
+                        42.9853417
+                    ],
+                    [
+                        1.1313458,
+                        42.9849585
+                    ]
+                ]
+            }
+        },
+        {
+            "id": "(1982987658, 620817937, 0)",
+            "type": "Feature",
+            "properties": {
+                "osmid": 187665729,
+                "highway": "residential",
+                "name": "Impasse des Maillos",
+                "oneway": false,
+                "reversed": true,
+                "length": 17.68388846367663,
+                "maxspeed": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        1.1355776,
+                        42.9856574
+                    ],
+                    [
+                        1.1353614,
+                        42.9856741
+                    ]
+                ]
+            }
+        },
+        {
+            "id": "(2103894735, 1976322136, 0)",
+            "type": "Feature",
+            "properties": {
+                "osmid": 48918781,
+                "highway": "residential",
+                "name": "Avenue Alfred de Musset",
+                "oneway": false,
+                "reversed": false,
+                "length": 116.1290220509405,
+                "maxspeed": "50"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        1.1298324,
+                        42.984463
+                    ],
+                    [
+                        1.1298894,
+                        42.9845249
+                    ],
+                    [
+                        1.1301471,
+                        42.9847949
+                    ],
+                    [
+                        1.1306485,
+                        42.9853199
+                    ]
+                ]
+            }
+        },
+        {
+            "id": "(2103964606, 2103964894, 0)",
+            "type": "Feature",
+            "properties": {
+                "osmid": 200403546,
+                "highway": "residential",
+                "name": "Impasse Victor Hugo",
+                "oneway": false,
+                "reversed": false,
+                "length": 86.04723108580995,
+                "maxspeed": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        1.1336365,
+                        42.9853199
+                    ],
+                    [
+                        1.133226,
+                        42.9860331
+                    ]
+                ]
+            }
+        },
+        {
+            "id": "(2103964606, 1976322147, 0)",
+            "type": "Feature",
+            "properties": {
+                "osmid": 421435718,
+                "highway": "residential",
+                "name": "Chemin des Maillos",
+                "oneway": false,
+                "reversed": false,
+                "length": 47.06784626765269,
+                "maxspeed": "50"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        1.1336365,
+                        42.9853199
+                    ],
+                    [
+                        1.1336677,
+                        42.9853292
+                    ],
+                    [
+                        1.1340373,
+                        42.9854059
+                    ],
+                    [
+                        1.1341931,
+                        42.9854349
+                    ]
+                ]
+            }
+        },
+        {
+            "id": "(2103964606, 620832928, 0)",
+            "type": "Feature",
+            "properties": {
+                "osmid": 421435718,
+                "highway": "residential",
+                "name": "Chemin des Maillos",
+                "oneway": false,
+                "reversed": true,
+                "length": 20.39670686609548,
+                "maxspeed": "50"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        1.1336365,
+                        42.9853199
+                    ],
+                    [
+                        1.133615,
+                        42.9853135
+                    ],
+                    [
+                        1.1335571,
+                        42.9852963
+                    ],
+                    [
+                        1.1334065,
+                        42.9852469
+                    ]
+                ]
+            }
+        },
+        {
+            "id": "(2103964894, 2103964606, 0)",
+            "type": "Feature",
+            "properties": {
+                "osmid": 200403546,
+                "highway": "residential",
+                "name": "Impasse Victor Hugo",
+                "oneway": false,
+                "reversed": true,
+                "length": 86.04723108580995,
+                "maxspeed": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        1.133226,
+                        42.9860331
+                    ],
+                    [
+                        1.1336365,
+                        42.9853199
+                    ]
+                ]
+            }
+        },
+        {
+            "id": "(2103965144, 620821953, 0)",
+            "type": "Feature",
+            "properties": {
+                "osmid": 186884897,
+                "highway": "residential",
+                "name": "Avenue Rhin et Danube",
+                "oneway": false,
+                "reversed": true,
+                "length": 134.25147470027935,
+                "maxspeed": "50"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        1.1319708,
+                        42.9869752
+                    ],
+                    [
+                        1.1318963,
+                        42.9868345
+                    ],
+                    [
+                        1.1318185,
+                        42.9867497
+                    ],
+                    [
+                        1.131526,
+                        42.9864309
+                    ],
+                    [
+                        1.131378,
+                        42.9862646
+                    ],
+                    [
+                        1.1312934,
+                        42.9861379
+                    ],
+                    [
+                        1.1311562,
+                        42.9859299
+                    ]
+                ]
+            }
+        },
+        {
+            "id": "(2103989710, 620817937, 0)",
+            "type": "Feature",
+            "properties": {
+                "osmid": 48918782,
+                "highway": "residential",
+                "name": "All\u00e9e du Bousquet",
+                "oneway": false,
+                "reversed": false,
+                "length": 211.00586748304875,
+                "maxspeed": "50"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        1.1367071,
+                        42.9867929
+                    ],
+                    [
+                        1.1366581,
+                        42.98675
+                    ],
+                    [
+                        1.1366253,
+                        42.9865256
+                    ],
+                    [
+                        1.1366173,
+                        42.9863619
+                    ],
+                    [
+                        1.1365445,
+                        42.9862927
+                    ],
+                    [
+                        1.1364495,
+                        42.9862625
+                    ],
+                    [
+                        1.1360817,
+                        42.9862163
+                    ],
+                    [
+                        1.1356829,
+                        42.986169
+                    ],
+                    [
+                        1.1354405,
+                        42.986146
+                    ],
+                    [
+                        1.1353251,
+                        42.9861024
+                    ],
+                    [
+                        1.1352694,
+                        42.9860394
+                    ],
+                    [
+                        1.1352783,
+                        42.9859712
+                    ],
+                    [
+                        1.1353614,
+                        42.9856741
+                    ]
+                ]
+            }
+        },
+        {
+            "id": "(2779945867, 1976322166, 0)",
+            "type": "Feature",
+            "properties": {
+                "osmid": 186884922,
+                "highway": "residential",
+                "name": "Rue Fran\u00e7ois Villon",
+                "oneway": false,
+                "reversed": false,
+                "length": 42.443621587753924,
+                "maxspeed": "50"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        1.1301427,
+                        42.9855923
+                    ],
+                    [
+                        1.1297225,
+                        42.9858186
+                    ]
+                ]
+            }
+        },
+        {
+            "id": "(2779945867, 1976322158, 0)",
+            "type": "Feature",
+            "properties": {
+                "osmid": 186884922,
+                "highway": "residential",
+                "name": "Rue Fran\u00e7ois Villon",
+                "oneway": false,
+                "reversed": true,
+                "length": 4.543073542480556,
+                "maxspeed": "50"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        1.1301427,
+                        42.9855923
+                    ],
+                    [
+                        1.1301877,
+                        42.9855681
+                    ]
+                ]
+            }
+        },
+        {
+            "id": "(2779945867, 2779945869, 0)",
+            "type": "Feature",
+            "properties": {
+                "osmid": 273103544,
+                "highway": "residential",
+                "name": "Impasse Fran\u00e7ois Villon",
+                "oneway": false,
+                "reversed": false,
+                "length": 23.72340999930113,
+                "maxspeed": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        1.1301427,
+                        42.9855923
+                    ],
+                    [
+                        1.130316,
+                        42.9857639
+                    ]
+                ]
+            }
+        },
+        {
+            "id": "(2779945869, 2779945867, 0)",
+            "type": "Feature",
+            "properties": {
+                "osmid": 273103544,
+                "highway": "residential",
+                "name": "Impasse Fran\u00e7ois Villon",
+                "oneway": false,
+                "reversed": true,
+                "length": 23.72340999930113,
+                "maxspeed": null
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        1.130316,
+                        42.9857639
+                    ],
+                    [
+                        1.1301427,
+                        42.9855923
+                    ]
+                ]
+            }
+        }
+    ]
+}

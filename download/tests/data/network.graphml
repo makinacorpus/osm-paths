@@ -1,0 +1,618 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="d15" for="edge" attr.name="geometry" attr.type="string" />
+  <key id="d14" for="edge" attr.name="maxspeed" attr.type="string" />
+  <key id="d13" for="edge" attr.name="length" attr.type="string" />
+  <key id="d12" for="edge" attr.name="reversed" attr.type="string" />
+  <key id="d11" for="edge" attr.name="oneway" attr.type="string" />
+  <key id="d10" for="edge" attr.name="name" attr.type="string" />
+  <key id="d9" for="edge" attr.name="highway" attr.type="string" />
+  <key id="d8" for="edge" attr.name="osmid" attr.type="string" />
+  <key id="d7" for="node" attr.name="highway" attr.type="string" />
+  <key id="d6" for="node" attr.name="street_count" attr.type="string" />
+  <key id="d5" for="node" attr.name="x" attr.type="string" />
+  <key id="d4" for="node" attr.name="y" attr.type="string" />
+  <key id="d3" for="graph" attr.name="simplified" attr.type="string" />
+  <key id="d2" for="graph" attr.name="crs" attr.type="string" />
+  <key id="d1" for="graph" attr.name="created_with" attr.type="string" />
+  <key id="d0" for="graph" attr.name="created_date" attr.type="string" />
+  <graph edgedefault="directed">
+    <node id="620817937">
+      <data key="d4">42.9856741</data>
+      <data key="d5">1.1353614</data>
+      <data key="d6">3</data>
+    </node>
+    <node id="620821942">
+      <data key="d4">42.9836227</data>
+      <data key="d5">1.1310311</data>
+      <data key="d6">3</data>
+    </node>
+    <node id="620821952">
+      <data key="d4">42.9858006</data>
+      <data key="d5">1.1310726</data>
+      <data key="d6">3</data>
+    </node>
+    <node id="620821953">
+      <data key="d4">42.9859299</data>
+      <data key="d5">1.1311562</data>
+      <data key="d6">3</data>
+    </node>
+    <node id="620821957">
+      <data key="d4">42.9848571</data>
+      <data key="d5">1.1325513</data>
+      <data key="d6">3</data>
+    </node>
+    <node id="620832903">
+      <data key="d4">42.9847823</data>
+      <data key="d5">1.1315702</data>
+      <data key="d6">1</data>
+    </node>
+    <node id="620832912">
+      <data key="d4">42.9845267</data>
+      <data key="d5">1.1320157</data>
+      <data key="d6">3</data>
+    </node>
+    <node id="620832928">
+      <data key="d4">42.9852469</data>
+      <data key="d5">1.1334065</data>
+      <data key="d6">3</data>
+    </node>
+    <node id="620832936">
+      <data key="d4">42.9847591</data>
+      <data key="d5">1.1339486</data>
+      <data key="d7">turning_circle</data>
+      <data key="d6">1</data>
+    </node>
+    <node id="1976322131">
+      <data key="d4">42.9852336</data>
+      <data key="d5">1.1298315</data>
+      <data key="d7">turning_circle</data>
+      <data key="d6">1</data>
+    </node>
+    <node id="1976322136">
+      <data key="d4">42.9853199</data>
+      <data key="d5">1.1306485</data>
+      <data key="d6">3</data>
+    </node>
+    <node id="1976322147">
+      <data key="d4">42.9854349</data>
+      <data key="d5">1.1341931</data>
+      <data key="d6">3</data>
+    </node>
+    <node id="1976322158">
+      <data key="d4">42.9855681</data>
+      <data key="d5">1.1301877</data>
+      <data key="d6">3</data>
+    </node>
+    <node id="1976322166">
+      <data key="d4">42.9858186</data>
+      <data key="d5">1.1297225</data>
+      <data key="d6">3</data>
+    </node>
+    <node id="1976322171">
+      <data key="d4">42.9861756</data>
+      <data key="d5">1.1338073</data>
+      <data key="d7">turning_circle</data>
+      <data key="d6">1</data>
+    </node>
+    <node id="1976322204">
+      <data key="d4">42.9871576</data>
+      <data key="d5">1.128883</data>
+      <data key="d6">3</data>
+    </node>
+    <node id="1982545021">
+      <data key="d4">42.9849585</data>
+      <data key="d5">1.1313458</data>
+      <data key="d6">1</data>
+    </node>
+    <node id="1982545022">
+      <data key="d4">42.9853417</data>
+      <data key="d5">1.1317918</data>
+      <data key="d6">3</data>
+    </node>
+    <node id="1982987658">
+      <data key="d4">42.9856574</data>
+      <data key="d5">1.1355776</data>
+      <data key="d6">3</data>
+    </node>
+    <node id="2103894735">
+      <data key="d4">42.984463</data>
+      <data key="d5">1.1298324</data>
+      <data key="d6">3</data>
+    </node>
+    <node id="2103964606">
+      <data key="d4">42.9853199</data>
+      <data key="d5">1.1336365</data>
+      <data key="d6">3</data>
+    </node>
+    <node id="2103964894">
+      <data key="d4">42.9860331</data>
+      <data key="d5">1.133226</data>
+      <data key="d6">1</data>
+    </node>
+    <node id="2103965144">
+      <data key="d4">42.9869752</data>
+      <data key="d5">1.1319708</data>
+      <data key="d6">3</data>
+    </node>
+    <node id="2103989710">
+      <data key="d4">42.9867929</data>
+      <data key="d5">1.1367071</data>
+      <data key="d6">3</data>
+    </node>
+    <node id="2779945867">
+      <data key="d4">42.9855923</data>
+      <data key="d5">1.1301427</data>
+      <data key="d6">3</data>
+    </node>
+    <node id="2779945869">
+      <data key="d4">42.9857639</data>
+      <data key="d5">1.130316</data>
+      <data key="d6">1</data>
+    </node>
+    <edge source="620817937" target="1982987658" id="0">
+      <data key="d8">187665729</data>
+      <data key="d9">residential</data>
+      <data key="d10">Impasse des Maillos</data>
+      <data key="d11">False</data>
+      <data key="d12">False</data>
+      <data key="d13">17.68388846367663</data>
+    </edge>
+    <edge source="620817937" target="2103989710" id="0">
+      <data key="d8">48918782</data>
+      <data key="d9">residential</data>
+      <data key="d14">50</data>
+      <data key="d10">Allée du Bousquet</data>
+      <data key="d11">False</data>
+      <data key="d12">True</data>
+      <data key="d13">211.0058674830488</data>
+      <data key="d15">LINESTRING (1.1353614 42.9856741, 1.1352783 42.9859712, 1.1352694 42.9860394, 1.1353251 42.9861024, 1.1354405 42.986146, 1.1356829 42.986169, 1.1360817 42.9862163, 1.1364495 42.9862625, 1.1365445 42.9862927, 1.1366173 42.9863619, 1.1366253 42.9865256, 1.1366581 42.98675, 1.1367071 42.9867929)</data>
+    </edge>
+    <edge source="620817937" target="1976322147" id="0">
+      <data key="d8">421435718</data>
+      <data key="d9">residential</data>
+      <data key="d14">50</data>
+      <data key="d10">Chemin des Maillos</data>
+      <data key="d11">False</data>
+      <data key="d12">True</data>
+      <data key="d13">98.69837743780158</data>
+      <data key="d15">LINESTRING (1.1353614 42.9856741, 1.1347261 42.9855378, 1.1345945 42.9855096, 1.1341931 42.9854349)</data>
+    </edge>
+    <edge source="620821942" target="620832912" id="0">
+      <data key="d8">200414783</data>
+      <data key="d9">residential</data>
+      <data key="d14">50</data>
+      <data key="d10">Rue Parmentier</data>
+      <data key="d11">False</data>
+      <data key="d12">False</data>
+      <data key="d13">128.53016673782327</data>
+      <data key="d15">LINESTRING (1.1310311 42.9836227, 1.1312107 42.9837837, 1.1314301 42.9839819, 1.1320157 42.9845267)</data>
+    </edge>
+    <edge source="620821952" target="1982545022" id="0">
+      <data key="d8">48917798</data>
+      <data key="d9">residential</data>
+      <data key="d14">50</data>
+      <data key="d10">Rue Nicolas Boileau</data>
+      <data key="d11">False</data>
+      <data key="d12">False</data>
+      <data key="d13">77.6285197368785</data>
+    </edge>
+    <edge source="620821952" target="620821953" id="0">
+      <data key="d8">48918781</data>
+      <data key="d9">residential</data>
+      <data key="d14">50</data>
+      <data key="d10">Avenue Alfred de Musset</data>
+      <data key="d11">False</data>
+      <data key="d12">False</data>
+      <data key="d13">15.904571636790706</data>
+    </edge>
+    <edge source="620821952" target="1976322136" id="0">
+      <data key="d8">48918781</data>
+      <data key="d9">residential</data>
+      <data key="d14">50</data>
+      <data key="d10">Avenue Alfred de Musset</data>
+      <data key="d11">False</data>
+      <data key="d12">True</data>
+      <data key="d13">63.61693577526832</data>
+    </edge>
+    <edge source="620821953" target="620821952" id="0">
+      <data key="d8">48918781</data>
+      <data key="d9">residential</data>
+      <data key="d14">50</data>
+      <data key="d10">Avenue Alfred de Musset</data>
+      <data key="d11">False</data>
+      <data key="d12">True</data>
+      <data key="d13">15.904571636790706</data>
+    </edge>
+    <edge source="620821953" target="2103965144" id="0">
+      <data key="d8">186884897</data>
+      <data key="d9">residential</data>
+      <data key="d14">50</data>
+      <data key="d10">Avenue Rhin et Danube</data>
+      <data key="d11">False</data>
+      <data key="d12">False</data>
+      <data key="d13">134.25147470027935</data>
+      <data key="d15">LINESTRING (1.1311562 42.9859299, 1.1312934 42.9861379, 1.131378 42.9862646, 1.131526 42.9864309, 1.1318185 42.9867497, 1.1318963 42.9868345, 1.1319708 42.9869752)</data>
+    </edge>
+    <edge source="620821953" target="1976322204" id="0">
+      <data key="d8">187622117</data>
+      <data key="d9">residential</data>
+      <data key="d14">50</data>
+      <data key="d10">Rue George Sand</data>
+      <data key="d11">False</data>
+      <data key="d12">False</data>
+      <data key="d13">230.14423492404632</data>
+      <data key="d15">LINESTRING (1.1311562 42.9859299, 1.1302728 42.986377, 1.1296291 42.986692, 1.128883 42.9871576)</data>
+    </edge>
+    <edge source="620821957" target="1982545022" id="0">
+      <data key="d8">48917798</data>
+      <data key="d9">residential</data>
+      <data key="d14">50</data>
+      <data key="d10">Rue Nicolas Boileau</data>
+      <data key="d11">False</data>
+      <data key="d12">True</data>
+      <data key="d13">81.97771131652857</data>
+    </edge>
+    <edge source="620821957" target="620832912" id="0">
+      <data key="d8">200414783</data>
+      <data key="d9">residential</data>
+      <data key="d14">50</data>
+      <data key="d10">Rue Parmentier</data>
+      <data key="d11">False</data>
+      <data key="d12">True</data>
+      <data key="d13">56.99328479971874</data>
+      <data key="d15">LINESTRING (1.1325513 42.9848571, 1.1322067 42.9846411, 1.1320157 42.9845267)</data>
+    </edge>
+    <edge source="620821957" target="620832928" id="0">
+      <data key="d8">421435718</data>
+      <data key="d9">residential</data>
+      <data key="d14">50</data>
+      <data key="d10">Chemin des Maillos</data>
+      <data key="d11">False</data>
+      <data key="d12">False</data>
+      <data key="d13">82.13171260979084</data>
+      <data key="d15">LINESTRING (1.1325513 42.9848571, 1.1330738 42.9851222, 1.1334065 42.9852469)</data>
+    </edge>
+    <edge source="620832903" target="620832912" id="0">
+      <data key="d8">48918780</data>
+      <data key="d9">residential</data>
+      <data key="d10">Impasse Parmentier</data>
+      <data key="d11">False</data>
+      <data key="d12">True</data>
+      <data key="d13">46.05434091898044</data>
+    </edge>
+    <edge source="620832912" target="620832903" id="0">
+      <data key="d8">48918780</data>
+      <data key="d9">residential</data>
+      <data key="d10">Impasse Parmentier</data>
+      <data key="d11">False</data>
+      <data key="d12">False</data>
+      <data key="d13">46.05434091898044</data>
+    </edge>
+    <edge source="620832912" target="620821957" id="0">
+      <data key="d8">200414783</data>
+      <data key="d9">residential</data>
+      <data key="d14">50</data>
+      <data key="d10">Rue Parmentier</data>
+      <data key="d11">False</data>
+      <data key="d12">False</data>
+      <data key="d13">56.99328479971874</data>
+      <data key="d15">LINESTRING (1.1320157 42.9845267, 1.1322067 42.9846411, 1.1325513 42.9848571)</data>
+    </edge>
+    <edge source="620832912" target="620821942" id="0">
+      <data key="d8">200414783</data>
+      <data key="d9">residential</data>
+      <data key="d14">50</data>
+      <data key="d10">Rue Parmentier</data>
+      <data key="d11">False</data>
+      <data key="d12">True</data>
+      <data key="d13">128.53016673782327</data>
+      <data key="d15">LINESTRING (1.1320157 42.9845267, 1.1314301 42.9839819, 1.1312107 42.9837837, 1.1310311 42.9836227)</data>
+    </edge>
+    <edge source="620832928" target="620832936" id="0">
+      <data key="d8">48918783</data>
+      <data key="d9">residential</data>
+      <data key="d10">Chemin de Bethmale</data>
+      <data key="d11">False</data>
+      <data key="d12">False</data>
+      <data key="d13">120.12484502328117</data>
+      <data key="d15">LINESTRING (1.1334065 42.9852469, 1.1337578 42.9851945, 1.1338218 42.9851815, 1.1338721 42.9851523, 1.1338839 42.9851288, 1.133874 42.9850989, 1.1337449 42.9850141, 1.1336137 42.9849216, 1.1335852 42.9848997, 1.1335683 42.9848673, 1.1335653 42.9848378, 1.1335752 42.9848094, 1.1336181 42.9847862, 1.1336928 42.9847801, 1.133802 42.9847739, 1.1338939 42.9847682, 1.1339486 42.9847591)</data>
+    </edge>
+    <edge source="620832928" target="2103964606" id="0">
+      <data key="d8">421435718</data>
+      <data key="d9">residential</data>
+      <data key="d14">50</data>
+      <data key="d10">Chemin des Maillos</data>
+      <data key="d11">False</data>
+      <data key="d12">False</data>
+      <data key="d13">20.39670686609548</data>
+      <data key="d15">LINESTRING (1.1334065 42.9852469, 1.1335571 42.9852963, 1.133615 42.9853135, 1.1336365 42.9853199)</data>
+    </edge>
+    <edge source="620832928" target="620821957" id="0">
+      <data key="d8">421435718</data>
+      <data key="d9">residential</data>
+      <data key="d14">50</data>
+      <data key="d10">Chemin des Maillos</data>
+      <data key="d11">False</data>
+      <data key="d12">True</data>
+      <data key="d13">82.13171260979084</data>
+      <data key="d15">LINESTRING (1.1334065 42.9852469, 1.1330738 42.9851222, 1.1325513 42.9848571)</data>
+    </edge>
+    <edge source="620832936" target="620832928" id="0">
+      <data key="d8">48918783</data>
+      <data key="d9">residential</data>
+      <data key="d10">Chemin de Bethmale</data>
+      <data key="d11">False</data>
+      <data key="d12">True</data>
+      <data key="d13">120.12484502328113</data>
+      <data key="d15">LINESTRING (1.1339486 42.9847591, 1.1338939 42.9847682, 1.133802 42.9847739, 1.1336928 42.9847801, 1.1336181 42.9847862, 1.1335752 42.9848094, 1.1335653 42.9848378, 1.1335683 42.9848673, 1.1335852 42.9848997, 1.1336137 42.9849216, 1.1337449 42.9850141, 1.133874 42.9850989, 1.1338839 42.9851288, 1.1338721 42.9851523, 1.1338218 42.9851815, 1.1337578 42.9851945, 1.1334065 42.9852469)</data>
+    </edge>
+    <edge source="1976322131" target="1976322158" id="0">
+      <data key="d8">186884916</data>
+      <data key="d9">residential</data>
+      <data key="d14">50</data>
+      <data key="d10">Rue François Villon</data>
+      <data key="d11">False</data>
+      <data key="d12">True</data>
+      <data key="d13">47.14815996298669</data>
+    </edge>
+    <edge source="1976322136" target="620821952" id="0">
+      <data key="d8">48918781</data>
+      <data key="d9">residential</data>
+      <data key="d14">50</data>
+      <data key="d10">Avenue Alfred de Musset</data>
+      <data key="d11">False</data>
+      <data key="d12">False</data>
+      <data key="d13">63.61693577526832</data>
+    </edge>
+    <edge source="1976322136" target="1976322158" id="0">
+      <data key="d8">186884922</data>
+      <data key="d9">residential</data>
+      <data key="d14">50</data>
+      <data key="d10">Rue François Villon</data>
+      <data key="d11">False</data>
+      <data key="d12">False</data>
+      <data key="d13">46.54697121085658</data>
+    </edge>
+    <edge source="1976322136" target="2103894735" id="0">
+      <data key="d8">48918781</data>
+      <data key="d9">residential</data>
+      <data key="d14">50</data>
+      <data key="d10">Avenue Alfred de Musset</data>
+      <data key="d11">False</data>
+      <data key="d12">True</data>
+      <data key="d13">116.12902205094049</data>
+      <data key="d15">LINESTRING (1.1306485 42.9853199, 1.1301471 42.9847949, 1.1298894 42.9845249, 1.1298324 42.984463)</data>
+    </edge>
+    <edge source="1976322147" target="1976322171" id="0">
+      <data key="d8">186884907</data>
+      <data key="d9">residential</data>
+      <data key="d10">Impasse Arthur Rimbaud</data>
+      <data key="d11">False</data>
+      <data key="d12">False</data>
+      <data key="d13">88.1381803034475</data>
+    </edge>
+    <edge source="1976322147" target="620817937" id="0">
+      <data key="d8">421435718</data>
+      <data key="d9">residential</data>
+      <data key="d14">50</data>
+      <data key="d10">Chemin des Maillos</data>
+      <data key="d11">False</data>
+      <data key="d12">False</data>
+      <data key="d13">98.69837743780158</data>
+      <data key="d15">LINESTRING (1.1341931 42.9854349, 1.1345945 42.9855096, 1.1347261 42.9855378, 1.1353614 42.9856741)</data>
+    </edge>
+    <edge source="1976322147" target="2103964606" id="0">
+      <data key="d8">421435718</data>
+      <data key="d9">residential</data>
+      <data key="d14">50</data>
+      <data key="d10">Chemin des Maillos</data>
+      <data key="d11">False</data>
+      <data key="d12">True</data>
+      <data key="d13">47.06784626765269</data>
+      <data key="d15">LINESTRING (1.1341931 42.9854349, 1.1340373 42.9854059, 1.1336677 42.9853292, 1.1336365 42.9853199)</data>
+    </edge>
+    <edge source="1976322158" target="1976322131" id="0">
+      <data key="d8">186884916</data>
+      <data key="d9">residential</data>
+      <data key="d14">50</data>
+      <data key="d10">Rue François Villon</data>
+      <data key="d11">False</data>
+      <data key="d12">False</data>
+      <data key="d13">47.14815996298669</data>
+    </edge>
+    <edge source="1976322158" target="2779945867" id="0">
+      <data key="d8">186884922</data>
+      <data key="d9">residential</data>
+      <data key="d14">50</data>
+      <data key="d10">Rue François Villon</data>
+      <data key="d11">False</data>
+      <data key="d12">False</data>
+      <data key="d13">4.543073542480556</data>
+    </edge>
+    <edge source="1976322158" target="1976322136" id="0">
+      <data key="d8">186884922</data>
+      <data key="d9">residential</data>
+      <data key="d14">50</data>
+      <data key="d10">Rue François Villon</data>
+      <data key="d11">False</data>
+      <data key="d12">True</data>
+      <data key="d13">46.54697121085658</data>
+    </edge>
+    <edge source="1976322166" target="2779945867" id="0">
+      <data key="d8">186884922</data>
+      <data key="d9">residential</data>
+      <data key="d14">50</data>
+      <data key="d10">Rue François Villon</data>
+      <data key="d11">False</data>
+      <data key="d12">True</data>
+      <data key="d13">42.443621587753924</data>
+    </edge>
+    <edge source="1976322171" target="1976322147" id="0">
+      <data key="d8">186884907</data>
+      <data key="d9">residential</data>
+      <data key="d10">Impasse Arthur Rimbaud</data>
+      <data key="d11">False</data>
+      <data key="d12">True</data>
+      <data key="d13">88.1381803034475</data>
+    </edge>
+    <edge source="1976322204" target="620821953" id="0">
+      <data key="d8">187622117</data>
+      <data key="d9">residential</data>
+      <data key="d14">50</data>
+      <data key="d10">Rue George Sand</data>
+      <data key="d11">False</data>
+      <data key="d12">True</data>
+      <data key="d13">230.14423492404632</data>
+      <data key="d15">LINESTRING (1.128883 42.9871576, 1.1296291 42.986692, 1.1302728 42.986377, 1.1311562 42.9859299)</data>
+    </edge>
+    <edge source="1982545021" target="1982545022" id="0">
+      <data key="d8">187622118</data>
+      <data key="d9">residential</data>
+      <data key="d14">50</data>
+      <data key="d10">Impasse François Rabelais</data>
+      <data key="d11">False</data>
+      <data key="d12">True</data>
+      <data key="d13">55.96212358504083</data>
+    </edge>
+    <edge source="1982545022" target="620821957" id="0">
+      <data key="d8">48917798</data>
+      <data key="d9">residential</data>
+      <data key="d14">50</data>
+      <data key="d10">Rue Nicolas Boileau</data>
+      <data key="d11">False</data>
+      <data key="d12">False</data>
+      <data key="d13">81.97771131652857</data>
+    </edge>
+    <edge source="1982545022" target="620821952" id="0">
+      <data key="d8">48917798</data>
+      <data key="d9">residential</data>
+      <data key="d14">50</data>
+      <data key="d10">Rue Nicolas Boileau</data>
+      <data key="d11">False</data>
+      <data key="d12">True</data>
+      <data key="d13">77.6285197368785</data>
+    </edge>
+    <edge source="1982545022" target="1982545021" id="0">
+      <data key="d8">187622118</data>
+      <data key="d9">residential</data>
+      <data key="d14">50</data>
+      <data key="d10">Impasse François Rabelais</data>
+      <data key="d11">False</data>
+      <data key="d12">False</data>
+      <data key="d13">55.96212358504083</data>
+    </edge>
+    <edge source="1982987658" target="620817937" id="0">
+      <data key="d8">187665729</data>
+      <data key="d9">residential</data>
+      <data key="d10">Impasse des Maillos</data>
+      <data key="d11">False</data>
+      <data key="d12">True</data>
+      <data key="d13">17.68388846367663</data>
+    </edge>
+    <edge source="2103894735" target="1976322136" id="0">
+      <data key="d8">48918781</data>
+      <data key="d9">residential</data>
+      <data key="d14">50</data>
+      <data key="d10">Avenue Alfred de Musset</data>
+      <data key="d11">False</data>
+      <data key="d12">False</data>
+      <data key="d13">116.1290220509405</data>
+      <data key="d15">LINESTRING (1.1298324 42.984463, 1.1298894 42.9845249, 1.1301471 42.9847949, 1.1306485 42.9853199)</data>
+    </edge>
+    <edge source="2103964606" target="2103964894" id="0">
+      <data key="d8">200403546</data>
+      <data key="d9">residential</data>
+      <data key="d10">Impasse Victor Hugo</data>
+      <data key="d11">False</data>
+      <data key="d12">False</data>
+      <data key="d13">86.04723108580995</data>
+    </edge>
+    <edge source="2103964606" target="1976322147" id="0">
+      <data key="d8">421435718</data>
+      <data key="d9">residential</data>
+      <data key="d14">50</data>
+      <data key="d10">Chemin des Maillos</data>
+      <data key="d11">False</data>
+      <data key="d12">False</data>
+      <data key="d13">47.06784626765269</data>
+      <data key="d15">LINESTRING (1.1336365 42.9853199, 1.1336677 42.9853292, 1.1340373 42.9854059, 1.1341931 42.9854349)</data>
+    </edge>
+    <edge source="2103964606" target="620832928" id="0">
+      <data key="d8">421435718</data>
+      <data key="d9">residential</data>
+      <data key="d14">50</data>
+      <data key="d10">Chemin des Maillos</data>
+      <data key="d11">False</data>
+      <data key="d12">True</data>
+      <data key="d13">20.39670686609548</data>
+      <data key="d15">LINESTRING (1.1336365 42.9853199, 1.133615 42.9853135, 1.1335571 42.9852963, 1.1334065 42.9852469)</data>
+    </edge>
+    <edge source="2103964894" target="2103964606" id="0">
+      <data key="d8">200403546</data>
+      <data key="d9">residential</data>
+      <data key="d10">Impasse Victor Hugo</data>
+      <data key="d11">False</data>
+      <data key="d12">True</data>
+      <data key="d13">86.04723108580995</data>
+    </edge>
+    <edge source="2103965144" target="620821953" id="0">
+      <data key="d8">186884897</data>
+      <data key="d9">residential</data>
+      <data key="d14">50</data>
+      <data key="d10">Avenue Rhin et Danube</data>
+      <data key="d11">False</data>
+      <data key="d12">True</data>
+      <data key="d13">134.25147470027935</data>
+      <data key="d15">LINESTRING (1.1319708 42.9869752, 1.1318963 42.9868345, 1.1318185 42.9867497, 1.131526 42.9864309, 1.131378 42.9862646, 1.1312934 42.9861379, 1.1311562 42.9859299)</data>
+    </edge>
+    <edge source="2103989710" target="620817937" id="0">
+      <data key="d8">48918782</data>
+      <data key="d9">residential</data>
+      <data key="d14">50</data>
+      <data key="d10">Allée du Bousquet</data>
+      <data key="d11">False</data>
+      <data key="d12">False</data>
+      <data key="d13">211.00586748304875</data>
+      <data key="d15">LINESTRING (1.1367071 42.9867929, 1.1366581 42.98675, 1.1366253 42.9865256, 1.1366173 42.9863619, 1.1365445 42.9862927, 1.1364495 42.9862625, 1.1360817 42.9862163, 1.1356829 42.986169, 1.1354405 42.986146, 1.1353251 42.9861024, 1.1352694 42.9860394, 1.1352783 42.9859712, 1.1353614 42.9856741)</data>
+    </edge>
+    <edge source="2779945867" target="1976322166" id="0">
+      <data key="d8">186884922</data>
+      <data key="d9">residential</data>
+      <data key="d14">50</data>
+      <data key="d10">Rue François Villon</data>
+      <data key="d11">False</data>
+      <data key="d12">False</data>
+      <data key="d13">42.443621587753924</data>
+    </edge>
+    <edge source="2779945867" target="1976322158" id="0">
+      <data key="d8">186884922</data>
+      <data key="d9">residential</data>
+      <data key="d14">50</data>
+      <data key="d10">Rue François Villon</data>
+      <data key="d11">False</data>
+      <data key="d12">True</data>
+      <data key="d13">4.543073542480556</data>
+    </edge>
+    <edge source="2779945867" target="2779945869" id="0">
+      <data key="d8">273103544</data>
+      <data key="d9">residential</data>
+      <data key="d10">Impasse François Villon</data>
+      <data key="d11">False</data>
+      <data key="d12">False</data>
+      <data key="d13">23.72340999930113</data>
+    </edge>
+    <edge source="2779945869" target="2779945867" id="0">
+      <data key="d8">273103544</data>
+      <data key="d9">residential</data>
+      <data key="d10">Impasse François Villon</data>
+      <data key="d11">False</data>
+      <data key="d12">True</data>
+      <data key="d13">23.72340999930113</data>
+    </edge>
+    <data key="d0">2025-03-27 11:13:39</data>
+    <data key="d1">OSMnx 2.0.1</data>
+    <data key="d2">epsg:4326</data>
+    <data key="d3">True</data>
+  </graph>
+</graphml>

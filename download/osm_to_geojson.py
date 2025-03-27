@@ -14,11 +14,9 @@ def osm_paths_to_geojson(bbox, network_type="walk"):
 
     network_graph = ox.graph_from_bbox(bbox=bbox_tuple, network_type=network_type, truncate_by_edge=True)
 
-    print(network_graph, '\n')
     gdf_edges = ox.graph_to_gdfs(network_graph, nodes=False)
 
-    geojson = gdf_edges.to_json()
-    print(geojson, '\n')
+    geojson = gdf_edges.to_json(indent = 4)
     return geojson
 
 

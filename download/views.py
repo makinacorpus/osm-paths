@@ -29,10 +29,10 @@ class PathsAPIView(APIView):
             response = JsonResponse(response_data, status=http_status.HTTP_200_OK, json_dumps_params={'indent': 4})
             response['Content-Disposition'] = 'attachment; filename=paths.geojson'
         except Exception as exc:
-            response = JsonResponse({'errors': f'{exc}'}, status=http_status.HTTP_500_INTERNAL_SERVER_ERROR, json_dumps_params={'indent': 4})
+            response = Response({'errors': f'{exc}'}, status=http_status.HTTP_500_INTERNAL_SERVER_ERROR)
         return response
 
     def post(self, request, *args, **kwargs):
-        serializer = self.serializer_class(data=request.POST)
+        serializer = self.serializer_class(data=request.data)
         return self.serializer_valid(serializer) \
             if serializer.is_valid() else self.serializer_invalid(serializer)

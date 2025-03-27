@@ -9,7 +9,7 @@ class Command(BaseCommand):
         parser.add_argument("bbox",
                             nargs=4,
                             type=float,
-                            help="Bounding box coordinates in WGS84: minlat minlon maxlat maxlon",)
+                            help="Bounding box coordinates in WGS84: minlon minlat maxlon maxlat",)
 
         parser.add_argument("filename",
                             help="Output filename (must have geojson extension)")
