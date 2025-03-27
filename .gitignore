@@ -1,5 +1,14 @@
-/cache/
-.idea/
-**/__pycache__/
-/env/
 *.pyc
+*.tar.gz
+*.log
+
+# Generated files
+__pycache__/
+/.idea/
+
+/env/
+
+/cypress/videos/
+/cypress/screenshots/
+
+/cache/
