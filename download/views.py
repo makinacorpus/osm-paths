@@ -6,6 +6,8 @@ from rest_framework import status as http_status
 from rest_framework.renderers import JSONRenderer, BrowsableAPIRenderer
 
 from django.http import JsonResponse
+from shapely.io import from_wkt
+
 from .serializers import DownloadSerializer
 
 from download.osm_to_geojson import osm_paths_to_geojson

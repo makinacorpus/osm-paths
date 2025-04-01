@@ -1,4 +1,11 @@
-def bbox_validity_check(bbox, CustomError):
+def bbox_validity_check(bbox_str, CustomError):
+    try:
+        bbox = tuple(float(coord) for coord in bbox_str.split(','))
+        if len(bbox) != 4:
+            raise CustomError()
+    except:
+        raise CustomError("Bounding box coordinates have 4 coordinates seperated by ',': minlon,minlat,maxlon,maxlat")
+
     minlon, minlat, maxlon, maxlat = bbox
 
     # latitude range
@@ -16,3 +23,5 @@ def bbox_validity_check(bbox, CustomError):
     # longitude order
     if maxlon <= minlon:
         raise CustomError('longitude coordinates are in the incorrect order')
+
+    return minlon, minlat, maxlon, maxlat

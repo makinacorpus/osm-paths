@@ -12,10 +12,10 @@ from . import mocked_osm_paths_to_geojson, mocked_overpass_API_error
 class DownloadAPITest(APISimpleTestCase):
 
     @mock.patch('download.views.osm_paths_to_geojson', mocked_osm_paths_to_geojson)
-    def download_geojson(self, bbox, network_type):
+    def download_geojson(self, polygon, network_type):
         serializer = serializers.DownloadSerializer()
         data = serializer.data
-        data["bbox"] = bbox
+        data["polygon"] = polygon
         data["network_type"] = network_type
 
         response = self.client.post(reverse('download:download_paths'), data=data)
@@ -23,88 +23,39 @@ class DownloadAPITest(APISimpleTestCase):
 
         return response, response_data
 
-    # ---------- BBOX ATTRIBUT ----------
-    def test_api_good_request(self):
+    # ---------- POLYGON ATTRIBUT ----------
+    def test_standard_polygon_argument(self):
         response, response_data = self.download_geojson(
-            "1.0965738048514198, 42.91887785089727, 1.118439172740824, 42.92538304213781", "all")
+            "POLYGON ((13.818054 46.286698, 13.815994 46.26724, 13.898392 46.2708, 13.900108 46.286936, 13.862343 46.300695, 13.818054 46.286698))",
+            "all")
 
         self.assertEqual(response.status_code, 200, response_data)
         self.assertEqual(response_data, {'test': 'validated'})
 
-    def test_lower_lon_argument(self):
+    def test_incorrect_WKT_format(self):
         response, response_data = self.download_geojson(
-            "-180.0965738048514198, 42.91887785089727, 1.118439172740824, 42.92538304213781", "all")
+            "POLYGON ((13.818054, 46.286698), (13.815994, 46.26724), (13.898392, 46.2708), (13.900108, 46.286936), (13.862343, 46.300695), (13.818054, 46.286698))",
+            "all")
 
         self.assertEqual(response.status_code, 400, response_data)
-        self.assertIn("bbox", response_data)
-        self.assertEqual(response_data["bbox"], ["longitude coordinate out of range: it must be between -180 and 180"])
+        self.assertIn("polygon", response_data)
+        self.assertEqual(response_data["polygon"], ['Invalid polygon format'])
 
-    def test_higher_lon_argument(self):
+    def test_incorrect_WKT_format(self):
         response, response_data = self.download_geojson(
-            "180.0965738048514198, 42.91887785089727, 1.118439172740824, 42.92538304213781", "all")
+            "POLYGON ((13.818054 46.286698, 13.862343 46.300695, 13.898392 46.2708, 13.900108 46.286936, 13.815994 46.26724, 13.818054 46.286698))",
+            "all")
 
         self.assertEqual(response.status_code, 400, response_data)
-        self.assertIn("bbox", response_data)
-        self.assertEqual(response_data["bbox"], ["longitude coordinate out of range: it must be between -180 and 180"])
-
-    def test_lower_lat_argument(self):
-        response, response_data = self.download_geojson(
-            "1.0965738048514198, -90.91887785089727, 1.118439172740824, 42.92538304213781", "all")
-
-        self.assertEqual(response.status_code, 400, response_data)
-        self.assertIn("bbox", response_data)
-        self.assertEqual(response_data["bbox"], ["latitude coordinate out of range: it must be between -90 and 90"])
-
-    def test_higher_lat_argument(self):
-        response, response_data = self.download_geojson(
-            "1.0965738048514198, 90.91887785089727, 1.118439172740824, 42.92538304213781", "all")
-
-        self.assertEqual(response.status_code, 400, response_data)
-        self.assertIn("bbox", response_data)
-        self.assertEqual(response_data["bbox"], ["latitude coordinate out of range: it must be between -90 and 90"])
-
-    def test_order_lon_argument(self):
-        response, response_data = self.download_geojson(
-            "1.118439172740824, 42.91887785089727, 1.0965738048514198, 42.92538304213781", "all")
-
-        self.assertEqual(response.status_code, 400, response_data)
-        self.assertIn("bbox", response_data)
-        self.assertEqual(response_data["bbox"], ["longitude coordinates are in the incorrect order"])
-
-    def test_order_lat_argument(self):
-        response, response_data = self.download_geojson(
-            "1.0965738048514198, 42.92538304213781, 1.118439172740824, 42.91887785089727", "all")
-
-        self.assertEqual(response.status_code, 400, response_data)
-        self.assertIn("bbox", response_data)
-        self.assertEqual(response_data["bbox"], ["latitude coordinates are in the incorrect order"])
-
-    @mock.patch('download.views.osm_paths_to_geojson', mocked_osm_paths_to_geojson)
-    def test_missing_bbox_argument(self):
-        serializer = serializers.DownloadSerializer()
-        data = serializer.data
-        data["network_type"] = "all"
-
-        response = self.client.post(reverse('download:download_paths'), data=data)
-        response_data = response.json()
-        self.assertEqual(response.status_code, 400, response_data)
-        self.assertIn("bbox", response_data)
-        self.assertEqual(response_data["bbox"], ["This field may not be blank."])
-
-    def test_wrong_bbox_typo(self):
-        response, response_data = self.download_geojson(
-            "1.0965738048514198 42.91887785089727 1.118439172740824 42.92538304213781", "all")
-
-        self.assertEqual(response.status_code, 400, response_data)
-        self.assertIn("bbox", response_data)
-        self.assertEqual(response_data["bbox"], ["Bounding box coordinates have 4 coordinates seperated by ',': minlon,minlat,maxlon,maxlat"])
+        self.assertIn("polygon", response_data)
+        self.assertEqual(response_data["polygon"], ['Invalid polygon format'])
 
     # ---------- NETWORK TYPE ATTRIBUT ----------
     @mock.patch('download.views.osm_paths_to_geojson', mocked_osm_paths_to_geojson)
     def test_default_network_type_argument(self):
         serializer = serializers.DownloadSerializer()
         data = serializer.data
-        data["bbox"] = "1.0965738048514198, 42.91887785089727, 1.118439172740824, 42.92538304213781"
+        data["polygon"] = "POLYGON ((13.818054 46.286698, 13.815994 46.26724, 13.898392 46.2708, 13.900108 46.286936, 13.862343 46.300695, 13.818054 46.286698))"
 
         response = self.client.post(reverse('download:download_paths'), data=data)
         response_data = response.json()
@@ -114,7 +65,7 @@ class DownloadAPITest(APISimpleTestCase):
 
     def test_wrong_network_type_argument(self):
         response, response_data = self.download_geojson(
-            "1.0965738048514198, 42.91887785089727, 1.118439172740824, 42.92538304213781", "test")
+            "POLYGON ((13.818054 46.286698, 13.815994 46.26724, 13.898392 46.2708, 13.900108 46.286936, 13.862343 46.300695, 13.818054 46.286698))", "test")
 
         self.assertEqual(response.status_code, 400, response_data)
         self.assertIn("network_type", response_data)
@@ -125,7 +76,7 @@ class DownloadAPITest(APISimpleTestCase):
     def test_server_error(self):
         serializer = serializers.DownloadSerializer()
         data = serializer.data
-        data["bbox"] = "1.0965738048514198, 42.91887785089727, 1.118439172740824, 42.92538304213781"
+        data["polygon"] = "POLYGON ((13.818054 46.286698, 13.815994 46.26724, 13.898392 46.2708, 13.900108 46.286936, 13.862343 46.300695, 13.818054 46.286698))"
         data["network_type"] = "all"
 
         response = self.client.post(reverse('download:download_paths'), data=data)
