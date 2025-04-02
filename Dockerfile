@@ -8,6 +8,9 @@ RUN mkdir /app
 # Set the working directory inside the container
 WORKDIR /app
 
+# Create a volume for Django command input and output
+VOLUME /app/var
+
 # Set environment variables
 ENV PYTHONBUFFERED=1
 ENV PYTHONDONTWRITEBYTECODE=1
@@ -20,7 +23,7 @@ COPY requirements.txt  /app/
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy the Django project to the container
-COPY ../. /app/
+COPY . /app/
 
 # Expose the Django port
 EXPOSE 8000
