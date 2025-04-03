@@ -218,10 +218,9 @@ class CommandTest(SimpleTestCase):
     def test_wrong_network_type_argument(self):
         arguments = ['-b', "1.0965738048514198, 42.91887785089727, 1.118439172740824, 42.92538304213781", self.filename, '-n', 'test']
 
-        with self.assertRaisesMessage(CommandError, "Error: argument -n/--network_type: invalid choice: 'test' (choose from 'all', 'drive', 'bike', 'walk')"):
+        with self.assertRaisesMessage(CommandError, "Error: argument -n/--network_type: invalid choice: 'test' (choose from all, drive, bike, walk)"):
             call_command('download', arguments)
 
         self.assertFalse(os.path.exists(self.filename))
-
-        "Error: argument --network_type/-n: invalid choice: 'test' (choose from 'all', 'drive', 'bike', 'walk')"
-        "Error: argument -n/--network_type: invalid choice: 'test' (choose from 'all', 'drive', 'bike', 'walk')"
+"Error: argument -n/--network_type: invalid choice: 'test' (choose from 'all', 'drive', 'bike', 'walk')"
+"Error: argument -n/--network_type: invalid choice: 'test' (choose from all, drive, bike, walk)"

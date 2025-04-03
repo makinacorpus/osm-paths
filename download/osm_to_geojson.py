@@ -1,3 +1,5 @@
+import os
+
 import osmnx as ox
 from shapely import Polygon
 
@@ -26,5 +28,6 @@ def osm_paths_to_geojson(polygon, network_type="walk"):
 
 
 def save_geojson(geojson, filename):
-    with open(filename, "w") as output:
+    file_path = os.path.join('/app', 'var', 'export', filename)
+    with open(file_path, "w") as output:
         output.write(geojson)

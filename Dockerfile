@@ -29,5 +29,4 @@ COPY . /app/
 EXPOSE 8000
 
 # Run Django’s development server
-CMD ["python", "manage.py", "runserver", "127.0.0.1:8000"]
-#gunicorn a la place de runserver
+CMD ["gunicorn", "importPath.wsgi:application", "--bind=0.0.0.0:8000"]

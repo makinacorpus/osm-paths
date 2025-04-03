@@ -35,10 +35,13 @@ class Command(BaseCommand):
 
         polygon_filename = options.get('polygon')
         if polygon_filename:
-            if not os.path.exists(polygon_filename):
-                raise CommandError(f"{polygon_filename} does not exist")
 
-            with open(polygon_filename, 'r') as f:
+            polygon_file_path = os.path.join('/app', 'var', 'boundary', polygon_filename)
+
+            if not os.path.exists(polygon_file_path):
+                raise CommandError(f"{polygon_file_path} does not exist")
+
+            with open(polygon_file_path, 'r') as f:
                 file = f.read()
 
             if ".wkt" in polygon_filename:

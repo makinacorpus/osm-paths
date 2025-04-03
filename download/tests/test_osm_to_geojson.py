@@ -30,7 +30,7 @@ class OpenStreetMapExtractTest(SimpleTestCase):
 
     @mock.patch('download.osm_to_geojson.ox.graph_from_polygon')
     def test_good_method_response(self, mocked):
-        polygon = Polygon([(13.818054, 46.286698), (13.815994, 46.26724), (13.898392, 46.2708), (13.900108, 46.286936), (13.862343, 46.300695), (13.818054, 46.286698)])
+        polygon = Polygon ([(13.818054, 46.286698), (13.815994, 46.26724), (13.898392, 46.2708), (13.900108, 46.286936), (13.862343, 46.300695), (13.818054, 46.286698)])
         network_type = "walk"
 
         mocked.return_value = self.network
