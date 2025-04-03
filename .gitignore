@@ -3,13 +3,10 @@
 *.log
 
 # Generated files
-*/__pycache__/
+**/__pycache__/
 /.idea/
 /var/
 
 /env/
-
-/cypress/videos/
-/cypress/screenshots/
 
 /cache/
