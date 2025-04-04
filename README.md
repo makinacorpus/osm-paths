@@ -58,7 +58,8 @@ docker exec app COMMAND
 python manage.py download OUTPUT_FILE -b BBOX [-n NETWORK_TYPE]
 ```
 **Parameters**
-- **OUTPUT_FILE**: name of your output file with the geojson extension. The output file will be delivered in the `var/export/` directory
+- **OUTPUT_FILE**: path of your output file with the geojson extension: `/app/var/boundary/filename.geojson`.
+    The output file will be delivered in the `var/export/` directory.
 - **BBOX**: bounding box coordinates in WGS84: ``minlon,minlat,maxlon,maxlat``
 - **NETWORK_TYPE** *(optional)*: type of paths to download.
   - `all`
@@ -71,7 +72,8 @@ python manage.py download OUTPUT_FILE -b BBOX [-n NETWORK_TYPE]
 python manage.py download OUTPUT_FILE -p POLYGON_FILE [-n NETWORK_TYPE]
 ```
 **Parameters**
-**OUTPUT_FILE**: name of your output file with the geojson extension. The output file will be delivered in the `var/export/` directory
+**OUTPUT_FILE**: path of your output file with the geojson extension: `/app/var/boundary/filename.geojson`.
+    The output file will be delivered in the `var/export/` directory.
 
 **POLYGON_FILE**: WKT or GeoJSON filename defining the polygon boundary.
 

@@ -23,7 +23,7 @@ class Command(BaseCommand):
         parser.add_argument("-n","--network_type",
                             choices=['all', 'drive', 'bike', 'walk'],
                             default='walk',
-                            help="Type of paths that will be downloaded: 'all', 'drive', 'bike', 'walk' (default: 'walk')")
+                            help="Type of paths that will be downloaded: all, drive, bike, walk (default: walk)")
 
     def handle(self, *args, **options):
         polygon = None
@@ -36,12 +36,10 @@ class Command(BaseCommand):
         polygon_filename = options.get('polygon')
         if polygon_filename:
 
-            polygon_file_path = os.path.join('/app', 'var', 'boundary', polygon_filename)
+            if not os.path.exists(polygon_filename):
+                raise CommandError(f"{polygon_filename} does not exist")
 
-            if not os.path.exists(polygon_file_path):
-                raise CommandError(f"{polygon_file_path} does not exist")
-
-            with open(polygon_file_path, 'r') as f:
+            with open(polygon_filename, 'r') as f:
                 file = f.read()
 
             if ".wkt" in polygon_filename:

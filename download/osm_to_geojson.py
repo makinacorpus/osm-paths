@@ -28,6 +28,5 @@ def osm_paths_to_geojson(polygon, network_type="walk"):
 
 
 def save_geojson(geojson, filename):
-    file_path = os.path.join('/app', 'var', 'export', filename)
-    with open(file_path, "w") as output:
+    with open(filename, "w") as output:
         output.write(geojson)
