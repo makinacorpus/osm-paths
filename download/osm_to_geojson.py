@@ -1,9 +1,6 @@
-import os
-
 import osmnx as ox
 from shapely import Polygon
 
-#from geopandas import GeoDataFrame
 
 def osm_paths_to_geojson(polygon, network_type="walk"):
     """
@@ -22,7 +19,7 @@ def osm_paths_to_geojson(polygon, network_type="walk"):
 
     gdf_edges = ox.graph_to_gdfs(network_graph_undirected, nodes=False)
 
-    geojson = gdf_edges.to_json(indent = 4)
+    geojson = gdf_edges.to_json(indent=4)
 
     return geojson
 

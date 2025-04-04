@@ -1,13 +1,10 @@
-import json
-from http.client import responses
-
-from rest_framework.exceptions import ValidationError, ParseError
 from rest_framework.test import APISimpleTestCase
 from django.urls import reverse
 
 from unittest import mock
 from download import serializers
 from . import mocked_osm_paths_to_geojson, mocked_overpass_API_error
+
 
 class DownloadAPITest(APISimpleTestCase):
 
@@ -35,15 +32,6 @@ class DownloadAPITest(APISimpleTestCase):
     def test_incorrect_WKT_format(self):
         response, response_data = self.download_geojson(
             "POLYGON ((13.818054, 46.286698), (13.815994, 46.26724), (13.898392, 46.2708), (13.900108, 46.286936), (13.862343, 46.300695), (13.818054, 46.286698))",
-            "all")
-
-        self.assertEqual(response.status_code, 400, response_data)
-        self.assertIn("polygon", response_data)
-        self.assertEqual(response_data["polygon"], ['Invalid polygon format'])
-
-    def test_incorrect_WKT_format(self):
-        response, response_data = self.download_geojson(
-            "POLYGON ((13.818054 46.286698, 13.862343 46.300695, 13.898392 46.2708, 13.900108 46.286936, 13.815994 46.26724, 13.818054 46.286698))",
             "all")
 
         self.assertEqual(response.status_code, 400, response_data)
@@ -84,4 +72,4 @@ class DownloadAPITest(APISimpleTestCase):
 
         self.assertEqual(response.status_code, 500, response_data)
         self.assertIn("errors", response_data)
-        self.assertEqual(response_data["errors"],"test")
+        self.assertEqual(response_data["errors"], "test")

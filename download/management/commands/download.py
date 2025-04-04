@@ -3,7 +3,8 @@ import os
 from django.core.management.base import BaseCommand, CommandError
 from download.osm_to_geojson import osm_paths_to_geojson, save_geojson
 from download.validity import bbox_validity_check
-from shapely import Polygon, from_wkt, from_geojson # django Polygon is not compatible with osmnx
+from shapely import Polygon, from_wkt, from_geojson
+
 
 class Command(BaseCommand):
     help = "Download paths from OpenStreetMap and return a geojson file"
@@ -20,7 +21,7 @@ class Command(BaseCommand):
                             type=str,
                             help="File with the polygon coordinates in WKT or geojson format (WGS84)")
 
-        parser.add_argument("-n","--network_type",
+        parser.add_argument("-n", "--network_type",
                             choices=['all', 'drive', 'bike', 'walk'],
                             default='walk',
                             help="Type of paths that will be downloaded: all, drive, bike, walk (default: walk)")
@@ -45,12 +46,12 @@ class Command(BaseCommand):
             if ".wkt" in polygon_filename:
                 try:
                     polygon = from_wkt(file)
-                except:
+                except Exception:
                     raise CommandError(f"{polygon_filename} does not contain a valid WKT polygon")
             elif ".geojson" in polygon_filename:
                 try:
                     polygon = from_geojson(file)
-                except:
+                except Exception:
                     raise CommandError(f"{polygon_filename} does not contain a valid geojson polygon")
             else:
                 raise CommandError(f"{polygon_filename} must be a .wkt or .geojson file")

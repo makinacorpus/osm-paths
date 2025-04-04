@@ -1,6 +1,3 @@
-from random import choices
-
-from django.conf import settings
 from django.utils.translation import gettext_lazy as _
 from rest_framework import serializers
 from shapely import from_wkt
@@ -24,7 +21,7 @@ class DownloadSerializer(serializers.Serializer):
             polygon = from_wkt(value)
             if not polygon.is_valid:
                 raise serializers.ValidationError()
-        except:
+        except serializers.ValidationError:
             raise serializers.ValidationError(_("Invalid polygon format"))
 
         return polygon

@@ -3,7 +3,7 @@ def bbox_validity_check(bbox_str, CustomError):
         bbox = tuple(float(coord) for coord in bbox_str.split(','))
         if len(bbox) != 4:
             raise CustomError()
-    except:
+    except CustomError:
         raise CustomError("Bounding box coordinates have 4 coordinates seperated by ',': minlon,minlat,maxlon,maxlat")
 
     minlon, minlat, maxlon, maxlat = bbox

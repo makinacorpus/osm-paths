@@ -8,6 +8,7 @@ from django.core.management.base import CommandError
 from unittest import mock
 from . import mocked_osm_paths_to_geojson
 
+
 @mock.patch('download.osm_to_geojson.osm_paths_to_geojson', mocked_osm_paths_to_geojson)
 class CommandTest(SimpleTestCase):
     filename = os.path.join(os.path.dirname(__file__), 'data', 'test.geojson')
@@ -26,7 +27,7 @@ class CommandTest(SimpleTestCase):
         os.remove(self.filename)
 
     def test_standard_long_bbox_arguments(self):
-        arguments = ['--bbox', "1.0965738048514198,42.91887785089727,1.118439172740824,42.92538304213781",self.filename,'-n',"all"]
+        arguments = ['--bbox', "1.0965738048514198,42.91887785089727,1.118439172740824,42.92538304213781", self.filename, '-n', "all"]
 
         call_command('download', arguments)
 
@@ -141,35 +142,35 @@ class CommandTest(SimpleTestCase):
         filename_invalid_geojson = os.path.join(os.path.dirname(__file__), 'data', 'invalid_polygon.geojson')
         arguments = ['--polygon', filename_invalid_geojson, self.filename, '-n', "all"]
 
-        with self.assertRaisesRegex(CommandError,f"{filename_invalid_geojson} does not contain a valid geojson polygon"):
+        with self.assertRaisesRegex(CommandError, f"{filename_invalid_geojson} does not contain a valid geojson polygon"):
             call_command('download', arguments)
 
     def test_invalid_polygon_wkt_argument(self):
         filename_invalid_wkt = os.path.join(os.path.dirname(__file__), 'data', 'invalid_polygon.wkt')
         arguments = ['--polygon', filename_invalid_wkt, self.filename, '-n', "all"]
 
-        with self.assertRaisesRegex(CommandError,f"{filename_invalid_wkt} does not contain a valid WKT polygon"):
+        with self.assertRaisesRegex(CommandError, f"{filename_invalid_wkt} does not contain a valid WKT polygon"):
             call_command('download', arguments)
 
     def test_invalid_filename_argument(self):
         invalid_filename = os.path.join(os.path.dirname(__file__), 'data', 'invalid_filename.wkt')
         arguments = ['--polygon', invalid_filename, self.filename, '-n', "all"]
 
-        with self.assertRaisesRegex(CommandError,f"{invalid_filename} does not exist"):
+        with self.assertRaisesRegex(CommandError, f"{invalid_filename} does not exist"):
             call_command('download', arguments)
 
     def test_invalid_filename_extension_argument(self):
         invalid_filename = os.path.join(os.path.dirname(__file__), 'data', 'invalid_filename.txt')
         arguments = ['--polygon', invalid_filename, self.filename, '-n', "all"]
 
-        with self.assertRaisesRegex(CommandError,f"{invalid_filename} must be a .wkt or .geojson file"):
+        with self.assertRaisesRegex(CommandError, f"{invalid_filename} must be a .wkt or .geojson file"):
             call_command('download', arguments)
 
     # ---------- NO BOUNDARY ARGUMENT ----------
     def test_no_boundary_argument(self):
         arguments = [self.filename, '-n', "all"]
 
-        with self.assertRaisesRegex(CommandError,"Bounding box or Polygon is required"):
+        with self.assertRaisesRegex(CommandError, "Bounding box or Polygon is required"):
             call_command('download', arguments)
 
     # ---------- FILENAME ARGUMENT ----------
@@ -188,7 +189,7 @@ class CommandTest(SimpleTestCase):
     def test_missing_filename_argument(self):
         arguments = ['-b', "1.0965738048514198, 42.91887785089727, 1.118439172740824, 42.92538304213781", '-n', "all"]
 
-        with self.assertRaisesRegex(CommandError, f"Error: the following arguments are required: filename"):
+        with self.assertRaisesRegex(CommandError, "Error: the following arguments are required: filename"):
             call_command('download', arguments)
 
         self.assertFalse(os.path.exists(self.filename))

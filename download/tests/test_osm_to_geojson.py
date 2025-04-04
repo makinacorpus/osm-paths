@@ -1,14 +1,12 @@
 import os
 import json
-
 import osmnx as ox
 
 from django.test import SimpleTestCase
 
 from unittest import mock
-from download.osm_to_geojson import osm_paths_to_geojson, save_geojson
-from geopandas import GeoDataFrame
 from shapely import Polygon
+from download.osm_to_geojson import osm_paths_to_geojson, save_geojson
 
 
 class OpenStreetMapExtractTest(SimpleTestCase):
@@ -30,7 +28,7 @@ class OpenStreetMapExtractTest(SimpleTestCase):
 
     @mock.patch('download.osm_to_geojson.ox.graph_from_polygon')
     def test_good_method_response(self, mocked):
-        polygon = Polygon ([(13.818054, 46.286698), (13.815994, 46.26724), (13.898392, 46.2708), (13.900108, 46.286936), (13.862343, 46.300695), (13.818054, 46.286698)])
+        polygon = Polygon([(13.818054, 46.286698), (13.815994, 46.26724), (13.898392, 46.2708), (13.900108, 46.286936), (13.862343, 46.300695), (13.818054, 46.286698)])
         network_type = "walk"
 
         mocked.return_value = self.network
@@ -52,7 +50,7 @@ class OpenStreetMapExtractTest(SimpleTestCase):
 
     @mock.patch('download.osm_to_geojson.ox.graph_from_polygon')
     def test_incorrect_polygon(self, mocked):
-        polygon = Polygon([(0,0), (0,3), (3,3), (3,0), (2,0), (2,2), (1,2), (1,1), (2,1), (2,0), (0,0)])
+        polygon = Polygon([(0, 0), (0, 3), (3, 3), (3, 0), (2, 0), (2, 2), (1, 2), (1, 1), (2, 1), (2, 0), (0, 0)])
         network_type = "walk"
 
         mocked.return_value = self.network
@@ -80,6 +78,3 @@ class OpenStreetMapExtractTest(SimpleTestCase):
         with open(filename, "r") as f:
             self.assertEqual(json.load(f), json.loads(geojson))
         os.remove(filename)
-
-
-
