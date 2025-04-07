@@ -18,7 +18,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip3 install -c requirements.txt
+          pip3 install -c OSM_Path/requirements.txt
 
       - name: run Tests
         run: |
