@@ -1,6 +1,6 @@
 from django.utils.translation import gettext_lazy as _
 from rest_framework import serializers
-from shapely import from_wkt
+from shapely import from_wkt, errors
 
 
 class DownloadSerializer(serializers.Serializer):
@@ -22,6 +22,8 @@ class DownloadSerializer(serializers.Serializer):
             if not polygon.is_valid:
                 raise serializers.ValidationError()
         except serializers.ValidationError:
+            raise serializers.ValidationError(_("Invalid polygon format"))
+        except errors.GEOSException:
             raise serializers.ValidationError(_("Invalid polygon format"))
 
         return polygon
