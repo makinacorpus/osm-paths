@@ -1,0 +1,25 @@
+name: Testing
+
+on:
+  pull_request:
+  push:
+    branches: 
+      - main
+
+jobs:
+  tests:
+    name: Python Unittests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v4
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          pip3 install -c requirements.txt
+
+      - name: run Tests
+        run: |
+          python3 manage.py test
