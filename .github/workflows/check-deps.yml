@@ -1,4 +1,4 @@
-name: Check deps
+name: Check dependencies
 
 on:
   pull_request:
@@ -6,7 +6,7 @@ on:
       - pyproject.toml
       - requirements.txt
       - requirements-dev.txt
-      - .github/workflows/dependencies.yml
+      - .github/workflows/check-deps.yml
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
