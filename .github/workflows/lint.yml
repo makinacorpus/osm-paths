@@ -1,4 +1,4 @@
-name: Lintage
+name: Code quality
 
 on:
   pull_request:
@@ -12,16 +12,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-python@v4
+      - uses: astral/setup-uv@v5
         with:
-          python-version: "3.12"
+          version: "latest"
 
       - name: Install dependencies
         run: |
-          pip3 install -c requirements.txt flake8
+          uvu pip install ruff -c requirements-dev.txt
 
-      - name: Flake8
+      - name: Check linting
         run: |
-          flake8 --ignore E501 download
+          ruff check osm-paths
 
-          
+      - name: Check format
+        run: |
+          ruff format --check osm-paths
