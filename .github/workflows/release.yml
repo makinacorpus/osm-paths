@@ -7,15 +7,15 @@ on:
       - completed
   release:
     types:
-      - published
+      - created
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
-    release:
-        if: ${{ github.event.workflow_run.conclusion == 'success' && (github.ref == 'refs/heads/main' || github.event_name == 'release') }}
+    release:if:
+        if: ${{ github.event.workflow_run.conclusion == 'success' && github.event_name != 'pull_request' }}
         runs-on: ubuntu-latest
         permissions:
             packages: write  # required to publish docker image
