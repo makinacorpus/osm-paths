@@ -2,6 +2,10 @@ ARG BASE_IMAGE=python:3.12-bookworm
 
 FROM ${BASE_IMAGE} AS base
 
+# Set environment variables
+ENV PYTHONBUFFERED=1
+ENV PYTHONDONTWRITEBYTECODE=1
+
 # Create the app directory
 RUN mkdir /app
 
@@ -10,10 +14,6 @@ WORKDIR /app
 
 # Create a volume for Django command input and output
 VOLUME /app/var
-
-# Set environment variables
-ENV PYTHONBUFFERED=1
-ENV PYTHONDONTWRITEBYTECODE=1
 
 # Upgrade pip
 RUN pip install --upgrade pip
@@ -29,4 +29,4 @@ COPY . /app/
 EXPOSE 8000
 
 # Run Django’s development server
-CMD ["gunicorn", "importPath.wsgi:application", "--bind=0.0.0.0:8000"]
+CMD ["gunicorn", "osm-paths.wsgi:application", "--bind=0.0.0.0:8000"]
