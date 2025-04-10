@@ -19,22 +19,22 @@ The extracted paths are then saved as a **GeoJSON** file compatible with **Geotr
     id -u
     ```
 
-2. Run a container:
+2. Run command in a container:
     ```bash
-    docker run -v $(pwd)/var:/app/var:rw --user {USER_ID} ghcr.io/makinacorpus/osm_paths python manage.py download
+    docker run -v $(pwd)/var:/app/var:rw --user {USER_ID} ghcr.io/makinacorpus/osm_paths osm_paths download 
     ```
 Replace `{USER_ID}`  with your actual user ID.
 
-## Load paths with Django-admin command
+## Download paths with command
 
 Paths can be downloaded using the **Django management command**. 
 The desired boundary can be specified using either a **bounding box** or a **polygon**. 
 Polygons should be provided in `.wkt` or `.geojson` format. 
 This file must be saved in the `var/boundary` directory.
 
-#### Download Paths Using a Bounding Box
+#### Download paths Using a Bounding Box
 ```bash
-python manage.py download OUTPUT_FILE -b BBOX [-n NETWORK_TYPE]
+osm_paths download OUTPUT_FILE -b BBOX [-n NETWORK_TYPE]
 ```
 **Parameters**
 - **OUTPUT_FILE**: path of your output file with the geojson extension: `/app/var/boundary/filename.geojson`.
@@ -48,7 +48,7 @@ python manage.py download OUTPUT_FILE -b BBOX [-n NETWORK_TYPE]
 
 #### Download Paths Using a Polygon
 ```bash
-python manage.py download OUTPUT_FILE -p POLYGON_FILE [-n NETWORK_TYPE]
+osm_paths download OUTPUT_FILE -p POLYGON_FILE [-n NETWORK_TYPE]
 ```
 **Parameters**
 **OUTPUT_FILE**: path of your output file with the geojson extension: `/app/var/boundary/filename.geojson`.
