@@ -24,7 +24,7 @@ The extracted paths are then saved as a **GeoJSON** file compatible with **Geotr
 
 2. Run command in a container:
     ```bash
-    docker run -v $(pwd)/var:/app/var:rw --user {USER_ID} ghcr.io/makinacorpus/osm_paths osm_paths download 
+    docker run -v $(pwd)/var:/app/var:rw --user {USER_ID} ghcr.io/makinacorpus/osm-paths osm_paths download 
     ```
 Replace `{USER_ID}`  with your actual user ID.
 
