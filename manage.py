@@ -1,0 +1,1 @@
+./osm_paths/manage.py
