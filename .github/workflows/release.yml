@@ -1,9 +1,14 @@
 name: Release
+
 on:
   workflow_run:
     workflows: ["Testing", "Linting", "Check deps"]
     types:
       - completed
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
     release:
