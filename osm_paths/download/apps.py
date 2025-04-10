@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class ImportConfig(AppConfig):
+class DownloadConfig(AppConfig):
     default_auto_field = "django.db.models.BigAutoField"
     name = "osm_paths.download"

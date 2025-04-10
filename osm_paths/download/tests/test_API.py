@@ -7,7 +7,7 @@ from . import mocked_osm_paths_to_geojson, mocked_overpass_API_error
 
 
 class DownloadAPITest(APISimpleTestCase):
-    @mock.patch("download.views.osm_paths_to_geojson", mocked_osm_paths_to_geojson)
+    @mock.patch("osm_paths.download.views.osm_paths_to_geojson", mocked_osm_paths_to_geojson)
     def download_geojson(self, polygon, network_type):
         serializer = serializers.DownloadSerializer()
         data = serializer.data
@@ -40,7 +40,7 @@ class DownloadAPITest(APISimpleTestCase):
         self.assertEqual(response_data["polygon"], ["Invalid polygon format"])
 
     # ---------- NETWORK TYPE ATTRIBUT ----------
-    @mock.patch("download.views.osm_paths_to_geojson", mocked_osm_paths_to_geojson)
+    @mock.patch("osm_paths.download.views.osm_paths_to_geojson", mocked_osm_paths_to_geojson)
     def test_default_network_type_argument(self):
         serializer = serializers.DownloadSerializer()
         data = serializer.data
@@ -67,7 +67,7 @@ class DownloadAPITest(APISimpleTestCase):
         )
 
     # ---------- SERVER ERROR ----------
-    @mock.patch("download.views.osm_paths_to_geojson", mocked_overpass_API_error)
+    @mock.patch("osm_paths.download.views.osm_paths_to_geojson", mocked_overpass_API_error)
     def test_server_error(self):
         serializer = serializers.DownloadSerializer()
         data = serializer.data

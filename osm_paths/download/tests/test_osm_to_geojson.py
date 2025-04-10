@@ -28,7 +28,7 @@ class OpenStreetMapExtractTest(SimpleTestCase):
         with open(filename_results, "r") as f:
             cls.results = json.load(f)
 
-    @mock.patch("download.osm_to_geojson.ox.graph_from_polygon")
+    @mock.patch("osm_paths.download.osm_to_geojson.ox.graph_from_polygon")
     def test_good_method_response(self, mocked):
         polygon = Polygon(
             [
@@ -48,7 +48,7 @@ class OpenStreetMapExtractTest(SimpleTestCase):
 
         self.assertEqual(json.loads(geojson), self.results)
 
-    @mock.patch("download.osm_to_geojson.ox.graph_from_polygon")
+    @mock.patch("osm_paths.download.osm_to_geojson.ox.graph_from_polygon")
     def test_different_polygon(self, mocked):
         polygon = Polygon(
             [
@@ -68,7 +68,7 @@ class OpenStreetMapExtractTest(SimpleTestCase):
 
         self.assertNotEqual(json.loads(geojson), self.results)
 
-    @mock.patch("download.osm_to_geojson.ox.graph_from_polygon")
+    @mock.patch("osm_paths.download.osm_to_geojson.ox.graph_from_polygon")
     def test_incorrect_polygon(self, mocked):
         polygon = Polygon(
             [
@@ -92,7 +92,7 @@ class OpenStreetMapExtractTest(SimpleTestCase):
         with self.assertRaisesRegex(TypeError, "Invalid polygon"):
             osm_paths_to_geojson(polygon, network_type)
 
-    @mock.patch("download.osm_to_geojson.ox.graph_from_polygon")
+    @mock.patch("osm_paths.download.osm_to_geojson.ox.graph_from_polygon")
     def test_incorrect_polygon_type(self, mocked):
         polygon = "POLYGON ((13.818054 46.286698, 13.815994 46.26724, 13.898392 46.2708, 13.900108 46.286936, 13.862343 46.300695, 13.818054 46.286698))"
         network_type = "walk"
