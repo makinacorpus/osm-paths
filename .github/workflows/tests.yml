@@ -12,14 +12,24 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-python@v4
+      - uses: astral-sh/setup-uv@v5
         with:
-          python-version: "3.12"
+            version: "latest"
+            python-version: "3.12"
+            enable-cache: true
 
       - name: Install dependencies
         run: |
-          pip3 install -r requirements.txt
+          uv pip install -r requirements.txt
 
       - name: run Tests
         run: |
-          python3 manage.py test
+          coverage run --parallel-mode --concurrency=multiprocessing ./manage.py test --parallel -v 3
+          coverage combine
+          coverage xml -o coverage.xml
+
+      - uses: codecov/codecov-action@v5
+        with:
+            files: ./coverage.xml
+            token: ${{ secrets.CODECOV_TOKEN }}
+            fail_ci_if_error: true # optional (default = false)
