@@ -9,7 +9,10 @@ from unittest import mock
 from . import mocked_osm_paths_to_geojson
 
 
-@mock.patch("osm_paths.download.osm_to_geojson.osm_paths_to_geojson", mocked_osm_paths_to_geojson)
+@mock.patch(
+    "osm_paths.download.osm_to_geojson.osm_paths_to_geojson",
+    mocked_osm_paths_to_geojson,
+)
 class CommandTest(SimpleTestCase):
     filename = os.path.join(os.path.dirname(__file__), "data", "test.geojson")
     filename_wkt = os.path.join(os.path.dirname(__file__), "data", "polygon.wkt")
