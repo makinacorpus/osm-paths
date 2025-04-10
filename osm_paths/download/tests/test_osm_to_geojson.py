@@ -6,7 +6,7 @@ from django.test import SimpleTestCase
 
 from unittest import mock
 from shapely import Polygon
-from download.osm_to_geojson import osm_paths_to_geojson, save_geojson
+from osm_paths.download.osm_to_geojson import osm_paths_to_geojson, save_geojson
 
 
 class OpenStreetMapExtractTest(SimpleTestCase):
