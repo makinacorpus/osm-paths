@@ -14,7 +14,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-    release:if:
+    release:
         if: ${{ github.event.workflow_run.conclusion == 'success' && github.event_name != 'pull_request' }}
         runs-on: ubuntu-latest
         permissions:
