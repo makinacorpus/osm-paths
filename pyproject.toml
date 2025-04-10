@@ -16,7 +16,9 @@ dev = [
 ]
 
 [tool.coverage.run]
-source = "osm-paths"
+source = [
+    "osm-paths"
+]
 omit = [
     "*/tests/*",
     "*/migrations/*",
