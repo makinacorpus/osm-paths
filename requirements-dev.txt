@@ -49,7 +49,7 @@ numpy==2.2.4
     #   pandas
     #   pyogrio
     #   shapely
-osmnx==2.0.1
+osmnx==2.0.2
     # via
     #   -c requirements.txt
     #   osm-paths (pyproject.toml)
