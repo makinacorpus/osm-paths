@@ -9,7 +9,7 @@ packages = ["osm_paths",]
 "./osm_paths" = "osm_paths"
 
 [project]
-version = "0.0.1"
+version = "0.1.0"
 name = "osm_paths"
 description = "Download GeoJSON paths from OpenSTreetMap"
 authors = [

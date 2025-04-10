@@ -1,5 +1,8 @@
 # Download OpenStreetMap paths as Geojson
 
+[![codecov](https://codecov.io/gh/makinacorpus/osm-paths/graph/badge.svg?token=Jg4jytesmP)](https://codecov.io/gh/makinacorpus/osm-paths)
+[![Testing](https://github.com/makinacorpus/osm-paths/actions/workflows/tests.yml/badge.svg)](https://github.com/makinacorpus/osm-paths/actions/workflows/tests.yml)
+
 **OpenStreetMap** is a collaborative, open-source mapping platform that provides freely accessible geographic data,
 maintained by a global community of contributors.
 
