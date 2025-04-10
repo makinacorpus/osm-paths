@@ -1,4 +1,4 @@
-name: Check dependencies
+name: Check deps with uv
 
 on:
   pull_request:
