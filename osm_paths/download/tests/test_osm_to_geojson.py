@@ -15,20 +15,31 @@ class OpenStreetMapExtractTest(SimpleTestCase):
     @classmethod
     def setUp(cls):
         # ---------- GRAPH_FROM_POLYGON ----------
-        filename = os.path.join(os.path.dirname(__file__), 'data', 'network.graphml')
+        filename = os.path.join(os.path.dirname(__file__), "data", "network.graphml")
         cls.network = ox.io.load_graphml(filename)
 
-        filename2 = os.path.join(os.path.dirname(__file__), 'data', 'network2.graphml')
+        filename2 = os.path.join(os.path.dirname(__file__), "data", "network2.graphml")
         cls.network2 = ox.io.load_graphml(filename2)
 
         # ---------- RESULTS ----------
-        filename_results = os.path.join(os.path.dirname(__file__), 'data', 'results.geojson')
-        with open(filename_results, 'r') as f:
+        filename_results = os.path.join(
+            os.path.dirname(__file__), "data", "results.geojson"
+        )
+        with open(filename_results, "r") as f:
             cls.results = json.load(f)
 
-    @mock.patch('download.osm_to_geojson.ox.graph_from_polygon')
+    @mock.patch("download.osm_to_geojson.ox.graph_from_polygon")
     def test_good_method_response(self, mocked):
-        polygon = Polygon([(13.818054, 46.286698), (13.815994, 46.26724), (13.898392, 46.2708), (13.900108, 46.286936), (13.862343, 46.300695), (13.818054, 46.286698)])
+        polygon = Polygon(
+            [
+                (13.818054, 46.286698),
+                (13.815994, 46.26724),
+                (13.898392, 46.2708),
+                (13.900108, 46.286936),
+                (13.862343, 46.300695),
+                (13.818054, 46.286698),
+            ]
+        )
         network_type = "walk"
 
         mocked.return_value = self.network
@@ -37,9 +48,18 @@ class OpenStreetMapExtractTest(SimpleTestCase):
 
         self.assertEqual(json.loads(geojson), self.results)
 
-    @mock.patch('download.osm_to_geojson.ox.graph_from_polygon')
+    @mock.patch("download.osm_to_geojson.ox.graph_from_polygon")
     def test_different_polygon(self, mocked):
-        polygon = Polygon([(13.818054, 46.286698), (13.815994, 46.26724), (13.898392, 46.2720), (13.900108, 46.286936), (13.862343, 46.300695), (13.818054, 46.286698)])
+        polygon = Polygon(
+            [
+                (13.818054, 46.286698),
+                (13.815994, 46.26724),
+                (13.898392, 46.2720),
+                (13.900108, 46.286936),
+                (13.862343, 46.300695),
+                (13.818054, 46.286698),
+            ]
+        )
         network_type = "walk"
 
         mocked.return_value = self.network2
@@ -48,9 +68,23 @@ class OpenStreetMapExtractTest(SimpleTestCase):
 
         self.assertNotEqual(json.loads(geojson), self.results)
 
-    @mock.patch('download.osm_to_geojson.ox.graph_from_polygon')
+    @mock.patch("download.osm_to_geojson.ox.graph_from_polygon")
     def test_incorrect_polygon(self, mocked):
-        polygon = Polygon([(0, 0), (0, 3), (3, 3), (3, 0), (2, 0), (2, 2), (1, 2), (1, 1), (2, 1), (2, 0), (0, 0)])
+        polygon = Polygon(
+            [
+                (0, 0),
+                (0, 3),
+                (3, 3),
+                (3, 0),
+                (2, 0),
+                (2, 2),
+                (1, 2),
+                (1, 1),
+                (2, 1),
+                (2, 0),
+                (0, 0),
+            ]
+        )
         network_type = "walk"
 
         mocked.return_value = self.network
@@ -58,7 +92,7 @@ class OpenStreetMapExtractTest(SimpleTestCase):
         with self.assertRaisesRegex(TypeError, "Invalid polygon"):
             osm_paths_to_geojson(polygon, network_type)
 
-    @mock.patch('download.osm_to_geojson.ox.graph_from_polygon')
+    @mock.patch("download.osm_to_geojson.ox.graph_from_polygon")
     def test_incorrect_polygon_type(self, mocked):
         polygon = "POLYGON ((13.818054 46.286698, 13.815994 46.26724, 13.898392 46.2708, 13.900108 46.286936, 13.862343 46.300695, 13.818054 46.286698))"
         network_type = "walk"
@@ -69,7 +103,7 @@ class OpenStreetMapExtractTest(SimpleTestCase):
             osm_paths_to_geojson(polygon, network_type)
 
     def test_save_file(self):
-        filename = os.path.join(os.path.dirname(__file__), 'data', 'test_save.geojson')
+        filename = os.path.join(os.path.dirname(__file__), "data", "test_save.geojson")
         geojson = json.dumps(self.results)
 
         save_geojson(geojson, filename)

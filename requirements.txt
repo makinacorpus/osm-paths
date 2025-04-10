@@ -11,14 +11,14 @@ charset-normalizer==3.4.1
     # via requests
 django==5.1.7
     # via
-    #   osm_paths (pyproject.toml)
+    #   osm-paths (pyproject.toml)
     #   djangorestframework
 djangorestframework==3.15.2
-    # via osm_paths (pyproject.toml)
+    # via osm-paths (pyproject.toml)
 geopandas==1.0.1
     # via osmnx
 gunicorn==23.0.0
-    # via osm_paths (pyproject.toml)
+    # via osm-paths (pyproject.toml)
 idna==3.10
     # via requests
 networkx==3.4.2
@@ -31,7 +31,7 @@ numpy==2.2.4
     #   pyogrio
     #   shapely
 osmnx==2.0.2
-    # via osm_paths (pyproject.toml)
+    # via osm-paths (pyproject.toml)
 packaging==24.2
     # via
     #   geopandas

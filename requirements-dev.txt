@@ -33,6 +33,8 @@ gunicorn==23.0.0
     # via
     #   -c requirements.txt
     #   osm-paths (pyproject.toml)
+hatchling==1.27.0
+    # via osm-paths (pyproject.toml)
 idna==3.10
     # via
     #   -c requirements.txt
@@ -58,12 +60,17 @@ packaging==24.2
     #   -c requirements.txt
     #   geopandas
     #   gunicorn
+    #   hatchling
     #   pyogrio
 pandas==2.2.3
     # via
     #   -c requirements.txt
     #   geopandas
     #   osmnx
+pathspec==0.12.1
+    # via hatchling
+pluggy==1.5.0
+    # via hatchling
 pyogrio==0.10.0
     # via
     #   -c requirements.txt
@@ -101,6 +108,8 @@ sqlparse==0.5.3
     #   django
 tblib==3.1.0
     # via osm-paths (pyproject.toml)
+trove-classifiers==2025.3.19.19
+    # via hatchling
 tzdata==2025.2
     # via
     #   -c requirements.txt
