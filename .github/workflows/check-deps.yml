@@ -12,11 +12,8 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
-env:
-  DEBIAN_FRONTEND: noninteractive
-
 jobs:
-  quality:
+  deps:
     name: Checking dependency graph
     runs-on: ubuntu:latest
 
