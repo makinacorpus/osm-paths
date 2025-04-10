@@ -21,7 +21,7 @@ django==5.1.7
     #   -c requirements.txt
     #   osm-paths (pyproject.toml)
     #   djangorestframework
-djangorestframework==3.15.2
+djangorestframework==3.16.0
     # via
     #   -c requirements.txt
     #   osm-paths (pyproject.toml)
