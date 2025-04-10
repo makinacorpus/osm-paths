@@ -17,4 +17,4 @@ Including another URLconf
 
 from django.urls import path, include
 
-urlpatterns = [path("api/", include("download.urls"))]
+urlpatterns = [path("api/", include("osm_paths.download.urls"))]

@@ -17,9 +17,6 @@ WORKDIR /app
 # Create a volume for Django command input and output
 VOLUME /app/var
 
-# Upgrade pip
-RUN pip install --upgrade pip
-
 # Install the application dependencies
 COPY requirements.txt  /app/
 COPY pyproject.toml  /app/

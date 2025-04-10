@@ -8,7 +8,7 @@ from rest_framework.renderers import JSONRenderer, BrowsableAPIRenderer
 from django.http import JsonResponse
 from .serializers import DownloadSerializer
 
-from download.osm_to_geojson import osm_paths_to_geojson
+from osm_paths.download.osm_to_geojson import osm_paths_to_geojson
 
 
 class PathsAPIView(APIView):
