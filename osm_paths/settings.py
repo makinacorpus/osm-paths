@@ -66,7 +66,7 @@ WSGI_APPLICATION = "osm_paths.wsgi.application"
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 DATABASES = {}
-
+VAR_DIR = BASE_DIR / "var"
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.1/topics/i18n/
