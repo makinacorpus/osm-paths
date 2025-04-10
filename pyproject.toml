@@ -14,3 +14,18 @@ dev = [
     "ruff",
     "uv"
 ]
+
+[tool.coverage.run]
+source = "osm-paths"
+omit = [
+    "*/tests/*",
+    "*/migrations/*",
+    "*/settings/*",
+    "*/test_runner.py",
+    "*/test_global.py",
+    "wsgi.py",
+]
+data_file = ".coverage"
+
+[tool.coverage.report]
+ignore_errors = true
