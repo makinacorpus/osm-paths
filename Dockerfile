@@ -6,6 +6,8 @@ FROM ${BASE_IMAGE} AS base
 ENV PYTHONBUFFERED=1
 ENV PYTHONDONTWRITEBYTECODE=1
 
+COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin/
+
 # Create the app directory
 RUN mkdir /app
 
@@ -20,13 +22,14 @@ RUN pip install --upgrade pip
 
 # Install the application dependencies
 COPY requirements.txt  /app/
-RUN pip install --no-cache-dir -r requirements.txt
+COPY pyproject.toml  /app/
+RUN uv pip install --system --no-cache-dir -r requirements.txt -U
 
 # Copy the Django project to the container
-COPY . /app/
+RUN --mount=type=bind,src=./osm_paths,dst=/app/osm_paths uv pip install --system --no-cache-dir .
 
 # Expose the Django port
 EXPOSE 8000
 
 # Run Django’s development server
-CMD ["gunicorn", "osm-paths.wsgi:application", "--bind=0.0.0.0:8000"]
+CMD ["gunicorn", "osm_paths.wsgi:application", "--bind=0.0.0.0:8000"]

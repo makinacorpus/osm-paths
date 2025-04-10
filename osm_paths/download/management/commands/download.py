@@ -1,8 +1,8 @@
 import os
 
 from django.core.management.base import BaseCommand, CommandError
-from download.osm_to_geojson import osm_paths_to_geojson, save_geojson
-from download.validity import bbox_validity_check
+from osm_paths.download.osm_to_geojson import osm_paths_to_geojson, save_geojson
+from osm_paths.download.validity import bbox_validity_check
 from shapely import Polygon, from_wkt, from_geojson
 
 

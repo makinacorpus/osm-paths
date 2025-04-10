@@ -2,7 +2,7 @@ from rest_framework.test import APISimpleTestCase
 from django.urls import reverse
 
 from unittest import mock
-from download import serializers
+from osm_paths.download import serializers
 from . import mocked_osm_paths_to_geojson, mocked_overpass_API_error
 
 
