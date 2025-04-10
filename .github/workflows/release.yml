@@ -1,8 +1,7 @@
 name: Release
 on:
   workflow_run:
-    workflows: ["Run Tests"]
-    branches: [main]
+    workflows: ["Testing", "Linting", "Check deps"]
     types:
       - completed
 

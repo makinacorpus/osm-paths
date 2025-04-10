@@ -15,10 +15,6 @@ jobs:
   quality:
     name: Checking dependency graph
     runs-on: ubuntu:latest
-    strategy:
-      matrix:
-        os: ['ubuntu-latest']
-        python-version: ['3.10']
 
     steps:
       - uses: actions/checkout@v4
