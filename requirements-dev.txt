@@ -76,7 +76,7 @@ python-dateutil==2.9.0.post0
     # via
     #   -c requirements.txt
     #   pandas
-pytz==2025.1
+pytz==2025.2
     # via
     #   -c requirements.txt
     #   pandas
