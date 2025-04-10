@@ -1,14 +1,34 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["osm_paths",]
+
+[tool.hatch.build.targets.sdist.force-include]
+"./osm_paths" = "osm_paths"
+
 [project]
-dynamic = ["version"]
-name = "osm-paths"
+version = "0.0.1"
+name = "osm_paths"
+description = "Download GeoJSON paths from OpenSTreetMap"
+authors = [
+  {name = "Nell Party", email = "nell.party@makina-corpus.com"},
+]
+maintainers = [
+  {name = "Makina Corpus", email = "geobi@makina-corpus.com"}
+]
 dependencies = [
     "Django",
     "djangorestframework",
     "osmnx",
     "gunicorn",
 ]
+[project.scripts]
+osm_paths = "manage:main"
 [project.optional-dependencies]
 dev = [
+    "hatchling",
     "tblib",
     "coverage",
     "ruff",
@@ -17,7 +37,7 @@ dev = [
 
 [tool.coverage.run]
 source = [
-    "osm-paths",
+    "osm_paths",
     "download"
 ]
 omit = [
@@ -27,6 +47,7 @@ omit = [
     "*/test_runner.py",
     "*/test_global.py",
     "wsgi.py",
+    "asgi.py",
 ]
 data_file = ".coverage"
 

@@ -30,8 +30,8 @@ jobs:
 
       - name: Check linting
         run: |
-          ruff check osm-paths
+          ruff check osm_paths
 
       - name: Check format
         run: |
-          ruff format --check osm-paths
+          ruff format --check osm_paths

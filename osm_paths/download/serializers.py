@@ -11,8 +11,10 @@ class DownloadSerializer(serializers.Serializer):
     network_type = serializers.ChoiceField(
         required=False,
         allow_blank=True,
-        choices=['all', 'drive', 'bike', 'walk'],
-        help_text=_("Type of paths that will be downloaded: 'all', 'drive', 'bike', 'walk'"),
+        choices=["all", "drive", "bike", "walk"],
+        help_text=_(
+            "Type of paths that will be downloaded: 'all', 'drive', 'bike', 'walk'"
+        ),
         initial="walk",
     )
 

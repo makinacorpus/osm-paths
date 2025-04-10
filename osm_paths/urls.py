@@ -1,5 +1,5 @@
 """
-URL configuration for osm-paths project.
+URL configuration for osm_paths project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/5.1/topics/http/urls/
@@ -17,4 +17,4 @@ Including another URLconf
 
 from django.urls import path, include
 
-urlpatterns = [path("api/", include("download.urls"))]
+urlpatterns = [path("api/", include("osm_paths.download.urls"))]

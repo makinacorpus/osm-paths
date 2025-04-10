@@ -12,7 +12,9 @@ def osm_paths_to_geojson(polygon, network_type="walk"):
     # Simplify the boundary with a tolerance of 0.00001°
     simplified_polygon = polygon.simplify(0.00001)
 
-    network_graph_directed = ox.graph_from_polygon(simplified_polygon, network_type=network_type, truncate_by_edge=True)
+    network_graph_directed = ox.graph_from_polygon(
+        simplified_polygon, network_type=network_type, truncate_by_edge=True
+    )
 
     # convert to undirected MultiDiGraph to avoid double path
     network_graph_undirected = ox.convert.to_undirected(network_graph_directed)
