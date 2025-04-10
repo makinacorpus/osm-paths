@@ -1,0 +1,49 @@
+name: Check deps
+
+on:
+  pull_request:
+    paths:
+      - pyproject.toml
+      - requirements.txt
+      - requirements-dev.txt
+      - .github/workflows/dependencies.yml
+
+env:
+  DEBIAN_FRONTEND: noninteractive
+
+jobs:
+  quality:
+    name: Checking dependency graph
+    runs-on: ubuntu:latest
+    strategy:
+      matrix:
+        os: ['ubuntu-latest']
+        python-version: ['3.10']
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: astral-sh/setup-uv@v5
+        with:
+          version: "latest"
+          python-version: "3.12"
+
+      - name: Check dependency graph
+        run: |
+          uv pip compile pyproject.toml -o requirements.txt
+          uv pip compile pyproject.toml --extra dev -c requirements.txt -o requirements-dev.txt
+
+      - name: Verify dependency graph is ok
+        uses: tj-actions/verify-changed-files@v20
+        id: verify-changed-files
+        with:
+          files: |
+            requirements.txt
+            requirements-dev.txt
+
+      - name: Validating graph
+        if: steps.verify-changed-files.outputs.files_changed == 'true'
+        run: |
+          echo "Dependency file(s) changed: ${{ steps.verify-changed-files.outputs.changed_files }}"
+          git diff
+          core.setFailed('Please fix your dependency with uv pip compile commands')
