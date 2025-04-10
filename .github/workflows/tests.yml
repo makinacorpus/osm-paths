@@ -28,7 +28,7 @@ jobs:
 
       - name: run Tests
         run: |
-          coverage run --parallel-mode --concurrency=multiprocessing osm_paths/manage.py test --parallel -v 3
+          coverage run --parallel-mode --concurrency=multiprocessing ./manage.py test --parallel -v 3
           coverage combine
           coverage xml -o coverage.xml
 
