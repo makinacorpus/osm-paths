@@ -1,5 +1,9 @@
 import osmnx as ox
+from django.conf import settings
 from shapely import Polygon
+
+ox.settings.use_cache = True
+ox.settings.cache_folder = settings.VAR_DIR / "cache"
 
 
 def osm_paths_to_geojson(polygon, network_type="walk"):
