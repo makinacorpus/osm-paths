@@ -9,6 +9,7 @@ https://docs.djangoproject.com/en/5.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.1/ref/settings/
 """
+
 import os
 from pathlib import Path
 
@@ -66,7 +67,7 @@ WSGI_APPLICATION = "osm_paths.wsgi.application"
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 DATABASES = {}
-CACHE_DIR = os.getenv('CACHE_DIR', '/tmp/osm_paths')
+CACHE_DIR = os.getenv("CACHE_DIR", "/tmp/osm_paths")
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.1/topics/i18n/

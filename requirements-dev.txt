@@ -96,6 +96,7 @@ ruff==0.11.4
 shapely==2.0.7
     # via
     #   -c requirements.txt
+    #   osm-paths (pyproject.toml)
     #   geopandas
     #   osmnx
 six==1.17.0

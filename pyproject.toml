@@ -22,6 +22,7 @@ dependencies = [
     "Django",
     "djangorestframework",
     "osmnx",
+    "shapely",
     "gunicorn",
 ]
 [project.scripts]
