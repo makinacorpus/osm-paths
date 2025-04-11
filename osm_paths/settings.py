@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/5.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.1/ref/settings/
 """
-
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -66,7 +66,7 @@ WSGI_APPLICATION = "osm_paths.wsgi.application"
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 DATABASES = {}
-VAR_DIR = BASE_DIR / "var"
+CACHE_DIR = os.getenv('CACHE_DIR', '/tmp/osm_paths')
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.1/topics/i18n/

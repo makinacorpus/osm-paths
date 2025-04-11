@@ -5,6 +5,7 @@ FROM ${BASE_IMAGE} AS base
 # Set environment variables
 ENV PYTHONBUFFERED=1
 ENV PYTHONDONTWRITEBYTECODE=1
+ENV CACHE_DIR=/tmp/cache
 
 COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin/
 
@@ -13,9 +14,6 @@ RUN mkdir /app
 
 # Set the working directory inside the container
 WORKDIR /app
-
-# Create a volume for Django command input and output
-VOLUME /app/var
 
 # Install the application dependencies
 COPY requirements.txt  /app/
