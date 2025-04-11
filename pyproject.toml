@@ -4,9 +4,16 @@ build-backend = "hatchling.build"
 
 [tool.hatch.build.targets.wheel]
 packages = ["osm_paths",]
-
-[tool.hatch.build.targets.sdist.force-include]
-"./osm_paths" = "osm_paths"
+exclude = [
+    "**/tests",
+    "**/dev.py",
+]
+[tool.hatch.build.targets.sdist]
+packages = ["osm_paths",]
+exclude = [
+    "/osm_paths/download/tests",
+    "/osm_paths/settings/dev.py",
+]
 
 [project]
 version = "0.1.0"
