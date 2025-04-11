@@ -1,5 +1,6 @@
 import os
 import json
+from io import StringIO
 
 from django.test import SimpleTestCase
 from django.core.management import call_command
@@ -19,6 +20,9 @@ class CommandTest(SimpleTestCase):
     filename_geojson = os.path.join(
         os.path.dirname(__file__), "data", "polygon.geojson"
     )
+
+    def setUp(self):
+        self.output_error = StringIO()
 
     # ---------- BBOX ARGUMENT ----------
     def test_standard_bbox_arguments(self):
@@ -61,12 +65,11 @@ class CommandTest(SimpleTestCase):
             "-n",
             "all",
         ]
-
-        with self.assertRaisesRegex(
-            CommandError,
+        call_command("download", arguments, stderr=self.output_error)
+        self.assertIn(
             "longitude coordinate out of range: it must be between -180 and 180",
-        ):
-            call_command("download", arguments)
+            self.output_error.getvalue(),
+        )
 
         self.assertFalse(os.path.exists(self.filename))
 
@@ -79,11 +82,11 @@ class CommandTest(SimpleTestCase):
             "all",
         ]
 
-        with self.assertRaisesRegex(
-            CommandError,
+        call_command("download", arguments, stderr=self.output_error)
+        self.assertIn(
             "longitude coordinate out of range: it must be between -180 and 180",
-        ):
-            call_command("download", arguments)
+            self.output_error.getvalue(),
+        )
 
         self.assertFalse(os.path.exists(self.filename))
 
@@ -96,11 +99,11 @@ class CommandTest(SimpleTestCase):
             "all",
         ]
 
-        with self.assertRaisesRegex(
-            CommandError,
+        call_command("download", arguments, stderr=self.output_error)
+        self.assertIn(
             "latitude coordinate out of range: it must be between -90 and 90",
-        ):
-            call_command("download", arguments)
+            self.output_error.getvalue(),
+        )
 
         self.assertFalse(os.path.exists(self.filename))
 
@@ -113,11 +116,11 @@ class CommandTest(SimpleTestCase):
             "all",
         ]
 
-        with self.assertRaisesRegex(
-            CommandError,
+        call_command("download", arguments, stderr=self.output_error)
+        self.assertIn(
             "latitude coordinate out of range: it must be between -90 and 90",
-        ):
-            call_command("download", arguments)
+            self.output_error.getvalue(),
+        )
 
         self.assertFalse(os.path.exists(self.filename))
 
@@ -130,10 +133,11 @@ class CommandTest(SimpleTestCase):
             "all",
         ]
 
-        with self.assertRaisesRegex(
-            CommandError, "longitude coordinates are in the incorrect order"
-        ):
-            call_command("download", arguments)
+        call_command("download", arguments, stderr=self.output_error)
+        self.assertIn(
+            "longitude coordinates are in the incorrect order",
+            self.output_error.getvalue(),
+        )
 
         self.assertFalse(os.path.exists(self.filename))
 
@@ -146,10 +150,11 @@ class CommandTest(SimpleTestCase):
             "all",
         ]
 
-        with self.assertRaisesRegex(
-            CommandError, "latitude coordinates are in the incorrect order"
-        ):
-            call_command("download", arguments)
+        call_command("download", arguments, stderr=self.output_error)
+        self.assertIn(
+            "latitude coordinates are in the incorrect order",
+            self.output_error.getvalue(),
+        )
 
         self.assertFalse(os.path.exists(self.filename))
 
@@ -162,12 +167,11 @@ class CommandTest(SimpleTestCase):
             "all",
         ]
 
-        with self.assertRaisesRegex(
-            CommandError,
+        call_command("download", arguments, stderr=self.output_error)
+        self.assertIn(
             "Bounding box coordinates have 4 coordinates seperated by ',': minlon,minlat,maxlon,maxlat",
-        ):
-            call_command("download", arguments)
-
+            self.output_error.getvalue(),
+        )
         self.assertFalse(os.path.exists(self.filename))
 
     # ---------- POLYGON ARGUMENT ----------
@@ -217,11 +221,11 @@ class CommandTest(SimpleTestCase):
         )
         arguments = ["--polygon", filename_invalid_geojson, self.filename, "-n", "all"]
 
-        with self.assertRaisesRegex(
-            CommandError,
+        call_command("download", arguments, stderr=self.output_error)
+        self.assertIn(
             f"{filename_invalid_geojson} does not contain a valid geojson polygon",
-        ):
-            call_command("download", arguments)
+            self.output_error.getvalue(),
+        )
 
     def test_invalid_polygon_wkt_argument(self):
         filename_invalid_wkt = os.path.join(
@@ -229,10 +233,11 @@ class CommandTest(SimpleTestCase):
         )
         arguments = ["--polygon", filename_invalid_wkt, self.filename, "-n", "all"]
 
-        with self.assertRaisesRegex(
-            CommandError, f"{filename_invalid_wkt} does not contain a valid WKT polygon"
-        ):
-            call_command("download", arguments)
+        call_command("download", arguments, stderr=self.output_error)
+        self.assertIn(
+            f"{filename_invalid_wkt} does not contain a valid WKT polygon",
+            self.output_error.getvalue(),
+        )
 
     def test_invalid_filename_argument(self):
         invalid_filename = os.path.join(
@@ -240,8 +245,10 @@ class CommandTest(SimpleTestCase):
         )
         arguments = ["--polygon", invalid_filename, self.filename, "-n", "all"]
 
-        with self.assertRaisesRegex(CommandError, f"{invalid_filename} does not exist"):
-            call_command("download", arguments)
+        call_command("download", arguments, stderr=self.output_error)
+        self.assertIn(
+            f"{invalid_filename} does not exist", self.output_error.getvalue()
+        )
 
     def test_invalid_filename_extension_argument(self):
         invalid_filename = os.path.join(
@@ -249,19 +256,20 @@ class CommandTest(SimpleTestCase):
         )
         arguments = ["--polygon", invalid_filename, self.filename, "-n", "all"]
 
-        with self.assertRaisesRegex(
-            CommandError, f"{invalid_filename} must be a .wkt or .geojson file"
-        ):
-            call_command("download", arguments)
+        call_command("download", arguments, stderr=self.output_error)
+        self.assertIn(
+            f"{invalid_filename} must be a .wkt or .geojson file",
+            self.output_error.getvalue(),
+        )
 
     # ---------- NO BOUNDARY ARGUMENT ----------
     def test_no_boundary_argument(self):
         arguments = [self.filename, "-n", "all"]
 
-        with self.assertRaisesRegex(
-            CommandError, "Bounding box or Polygon is required"
-        ):
-            call_command("download", arguments)
+        call_command("download", arguments, stderr=self.output_error)
+        self.assertIn(
+            "Bounding box or Polygon is required", self.output_error.getvalue()
+        )
 
     # ---------- FILENAME ARGUMENT ----------
     def test_filename_missing_extension(self):

@@ -37,51 +37,53 @@ class Command(BaseCommand):
         )
 
     def handle(self, *args, **options):
-        polygon = None
+        try:
+            polygon = None
+            bbox_str = options.get("bbox")
+            network_type = options.get("network_type")
 
-        bbox_str = options.get("bbox")
-        if bbox_str:
-            minlon, minlat, maxlon, maxlat = bbox_validity_check(
-                options["bbox"], CommandError
-            )
-            polygon = Polygon.from_bounds(minlon, minlat, maxlon, maxlat)
+            if bbox_str:
+                minlon, minlat, maxlon, maxlat = bbox_validity_check(options["bbox"])
+                polygon = Polygon.from_bounds(minlon, minlat, maxlon, maxlat)
 
-        polygon_filename = options.get("polygon")
-        if polygon_filename:
-            if not os.path.exists(polygon_filename):
-                raise CommandError(f"{polygon_filename} does not exist")
+            polygon_filename = options.get("polygon")
+            if polygon_filename:
+                if not os.path.exists(polygon_filename):
+                    raise CommandError(f"{polygon_filename} does not exist")
 
-            with open(polygon_filename, "r") as f:
-                file = f.read()
+                with open(polygon_filename, "r") as f:
+                    file = f.read()
 
-            if ".wkt" in polygon_filename:
-                try:
-                    polygon = from_wkt(file)
-                except Exception:
+                if polygon_filename.endswith(".wkt"):
+                    try:
+                        polygon = from_wkt(file)
+                    except Exception:
+                        raise CommandError(
+                            f"{polygon_filename} does not contain a valid WKT polygon"
+                        )
+                elif polygon_filename.endswith(".geojson"):
+                    try:
+                        polygon = from_geojson(file)
+                    except Exception:
+                        raise CommandError(
+                            f"{polygon_filename} does not contain a valid geojson polygon"
+                        )
+                else:
                     raise CommandError(
-                        f"{polygon_filename} does not contain a valid WKT polygon"
+                        f"{polygon_filename} must be a .wkt or .geojson file"
                     )
-            elif ".geojson" in polygon_filename:
-                try:
-                    polygon = from_geojson(file)
-                except Exception:
-                    raise CommandError(
-                        f"{polygon_filename} does not contain a valid geojson polygon"
-                    )
-            else:
-                raise CommandError(
-                    f"{polygon_filename} must be a .wkt or .geojson file"
-                )
 
-        if not polygon:
-            raise CommandError("Bounding box or Polygon is required")
+            if not polygon:
+                raise CommandError("Bounding box or Polygon is required")
 
-        filename = options.get("filename")
-        if not filename.endswith(".geojson"):
-            filename = f"{filename}.geojson"
+            filename = options.get("filename")
+            if not filename.endswith(".geojson"):
+                filename = f"{filename}.geojson"
 
-        network_type = options.get("network_type")
+            geojson = osm_paths_to_geojson(polygon, network_type)
+            save_geojson(geojson, filename)
 
-        geojson = osm_paths_to_geojson(polygon, network_type)
+            self.stdout.write(self.style.SUCCESS(f"Geojson file saved to {filename}"))
 
-        save_geojson(geojson, filename)
+        except Exception as e:
+            self.stderr.write(self.style.ERROR(str(e)))
