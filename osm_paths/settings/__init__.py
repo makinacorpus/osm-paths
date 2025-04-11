@@ -14,19 +14,16 @@ import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-ta38laalyq-bgjh5-$ev%vy$v@h$e-^04cv9$vctnjr)9q#twf"
-
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "").split(",")
 
 # Application definition
 
@@ -71,8 +68,8 @@ CACHE_DIR = os.getenv("CACHE_DIR", "/tmp/osm_paths")
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.1/topics/i18n/
-LANGUAGE_CODE = "en-us"
-TIME_ZONE = "UTC"
+LANGUAGE_CODE = os.getenv("LANGUAGE_CODE", "en-us")
+TIME_ZONE = os.getenv("TZ", "UTC")
 USE_I18N = True
 USE_TZ = True
 

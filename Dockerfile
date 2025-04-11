@@ -6,6 +6,7 @@ FROM ${BASE_IMAGE} AS base
 ENV PYTHONBUFFERED=1
 ENV PYTHONDONTWRITEBYTECODE=1
 ENV CACHE_DIR=/tmp/cache
+ENV DJANGO_SETTINGS_MODULE=osm_paths.settings
 
 COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin/
 
@@ -16,12 +17,8 @@ RUN mkdir /app
 WORKDIR /app
 
 # Install the application dependencies
-COPY requirements.txt  /app/
-COPY pyproject.toml  /app/
-RUN uv pip install --system --no-cache-dir -r requirements.txt -U
-
-# Copy the Django project to the container
-RUN --mount=type=bind,src=./osm_paths,dst=/app/osm_paths uv pip install --system --no-cache-dir .
+RUN --mount=type=bind,src=./requirements.txt,dst=/app/requirements.txt uv pip install --system --no-cache-dir -r requirements.txt -U
+RUN --mount=type=bind,src=./osm_paths,dst=/app/osm_paths --mount=type=bind,src=./pyproject.toml,dst=/app/pyproject.toml uv pip install --system --no-cache-dir .
 
 # Expose the Django port
 EXPOSE 8000
