@@ -32,7 +32,7 @@ numpy==2.2.4
     #   shapely
 osmnx==2.0.2
     # via osm-paths (pyproject.toml)
-packaging==24.2
+packaging==25.0
     # via
     #   geopandas
     #   gunicorn
