@@ -62,7 +62,7 @@ packaging==24.2
     #   gunicorn
     #   hatchling
     #   pyogrio
-pandas==2.2.3
+pandas==2.3.0
     # via
     #   -c requirements.txt
     #   geopandas
