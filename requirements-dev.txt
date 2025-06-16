@@ -119,5 +119,5 @@ urllib3==2.3.0
     # via
     #   -c requirements.txt
     #   requests
-uv==0.6.14
+uv==0.7.13
     # via osm-paths (pyproject.toml)
