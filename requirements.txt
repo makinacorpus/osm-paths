@@ -30,7 +30,7 @@ numpy==2.2.4
     #   pandas
     #   pyogrio
     #   shapely
-osmnx==2.0.2
+osmnx==2.0.5
     # via osm-paths (pyproject.toml)
 packaging==24.2
     # via
