@@ -43,6 +43,11 @@ osm_paths download OUTPUT_FILE -b BBOX [-n NETWORK_TYPE]
   - `bike`
   - `walk` (default)
 
+> **Exemples**
+> ```bash
+> docker run -v $(pwd):/app --user $(id -u) ghcr.io/makinacorpus/osm-paths osm_paths download paths.geojson -b 43.541462,1.364021,43.661376,1.540489 -n "bike"
+> ```
+
 #### Download Paths Using a Polygon
 ```bash
 osm_paths download OUTPUT_FILE -p POLYGON_FILE [-n NETWORK_TYPE]
@@ -52,6 +57,8 @@ osm_paths download OUTPUT_FILE -p POLYGON_FILE [-n NETWORK_TYPE]
     The output file will be delivered in the `var/export/` directory.
 
 **POLYGON_FILE**: WKT or GeoJSON filename defining the polygon boundary.
+    - WKT file exemple
+    - GeoJSON file exemple
 
 - **NETWORK_TYPE** *(optional)*: type of paths to download.
   - `all`
@@ -61,6 +68,44 @@ osm_paths download OUTPUT_FILE -p POLYGON_FILE [-n NETWORK_TYPE]
 
 ⚠️ **Performance Tip**: Using a polygon with fewer nodes improves execution speed. It is recommended to keep the number of nodes below 1000.
 
+> **Exemple**
+> ```bash
+> docker run -v $(pwd):/app --user $(id -u) ghcr.io/makinacorpus/osm-paths osm_paths download paths.geojson -p boundary.wkt -n "bike"
+> ```
+
+## Boundary file exemples
+
+### WKT file
+
+```txt
+POLYGON ((13.695831 46.471916,
+          13.487091 46.364936,
+          13.75351 46.193141,
+          13.94577 46.226403,
+          14.117432 46.397147,
+          13.908691 46.477591,
+          13.695831 46.471916))
+```
+
+### GeoJSON file
+
+```json
+{
+    "type": "Polygon", 
+    "coordinates": [
+        [
+            [13.695831, 46.471916], 
+            [13.487091, 46.364936], 
+            [13.753510, 46.193141], 
+            [13.945770, 46.226403], 
+            [14.117432, 46.397147], 
+            [13.908691, 46.477591], 
+            [13.695831, 46.471916]  
+        ]
+    ]
+}
+
+```
 
 
 
