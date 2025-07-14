@@ -2,7 +2,7 @@
 #    uv pip compile pyproject.toml -o requirements.txt
 asgiref==3.8.1
     # via django
-certifi==2025.1.31
+certifi==2025.7.14
     # via
     #   pyogrio
     #   pyproj
