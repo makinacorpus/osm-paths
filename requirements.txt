@@ -23,7 +23,7 @@ idna==3.10
     # via requests
 networkx==3.4.2
     # via osmnx
-numpy==2.2.4
+numpy==2.3.3
     # via
     #   geopandas
     #   osmnx

@@ -43,7 +43,7 @@ networkx==3.4.2
     # via
     #   -c requirements.txt
     #   osmnx
-numpy==2.2.4
+numpy==2.3.3
     # via
     #   -c requirements.txt
     #   geopandas
