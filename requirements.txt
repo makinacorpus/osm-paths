@@ -21,7 +21,7 @@ gunicorn==23.0.0
     # via osm-paths (pyproject.toml)
 idna==3.10
     # via requests
-networkx==3.4.2
+networkx==3.5
     # via osmnx
 numpy==2.3.4
     # via
