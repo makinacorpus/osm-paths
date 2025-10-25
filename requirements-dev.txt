@@ -25,7 +25,7 @@ djangorestframework==3.16.0
     # via
     #   -c requirements.txt
     #   osm-paths (pyproject.toml)
-geopandas==1.0.1
+geopandas==1.1.1
     # via
     #   -c requirements.txt
     #   osmnx
