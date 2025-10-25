@@ -93,7 +93,7 @@ requests==2.32.5
     #   osmnx
 ruff==0.14.1
     # via osm-paths (pyproject.toml)
-shapely==2.0.7
+shapely==2.1.2
     # via
     #   -c requirements.txt
     #   osm-paths (pyproject.toml)
