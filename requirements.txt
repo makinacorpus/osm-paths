@@ -37,7 +37,7 @@ packaging==24.2
     #   geopandas
     #   gunicorn
     #   pyogrio
-pandas==2.2.3
+pandas==2.3.3
     # via
     #   geopandas
     #   osmnx
