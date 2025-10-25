@@ -15,7 +15,7 @@ django==5.1.7
     #   djangorestframework
 djangorestframework==3.16.1
     # via osm-paths (pyproject.toml)
-geopandas==1.0.1
+geopandas==1.1.1
     # via osmnx
 gunicorn==23.0.0
     # via osm-paths (pyproject.toml)
