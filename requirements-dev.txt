@@ -107,7 +107,7 @@ sqlparse==0.5.3
     # via
     #   -c requirements.txt
     #   django
-tblib==3.1.0
+tblib==3.2.0
     # via osm-paths (pyproject.toml)
 trove-classifiers==2025.9.11.17
     # via hatchling
