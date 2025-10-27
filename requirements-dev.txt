@@ -35,7 +35,7 @@ gunicorn==23.0.0
     #   osm-paths (pyproject.toml)
 hatchling==1.27.0
     # via osm-paths (pyproject.toml)
-idna==3.10
+idna==3.11
     # via
     #   -c requirements.txt
     #   requests
