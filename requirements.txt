@@ -9,7 +9,7 @@ certifi==2025.10.5
     #   requests
 charset-normalizer==3.4.4
     # via requests
-django==5.1.7
+django==5.1.13
     # via
     #   osm-paths (pyproject.toml)
     #   djangorestframework
