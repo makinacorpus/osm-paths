@@ -19,7 +19,7 @@ geopandas==1.1.1
     # via osmnx
 gunicorn==23.0.0
     # via osm-paths (pyproject.toml)
-idna==3.10
+idna==3.11
     # via requests
 networkx==3.5
     # via osmnx
