@@ -39,7 +39,7 @@ idna==3.11
     # via
     #   -c requirements.txt
     #   requests
-networkx==3.5
+networkx==3.6.1
     # via
     #   -c requirements.txt
     #   osmnx
