@@ -111,7 +111,7 @@ tblib==3.2.0
     # via osm-paths (pyproject.toml)
 trove-classifiers==2025.9.11.17
     # via hatchling
-tzdata==2025.2
+tzdata==2025.3
     # via
     #   -c requirements.txt
     #   pandas
