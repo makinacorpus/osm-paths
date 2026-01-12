@@ -67,7 +67,7 @@ pandas==2.3.3
     #   -c requirements.txt
     #   geopandas
     #   osmnx
-pathspec==0.12.1
+pathspec==1.0.3
     # via hatchling
 pluggy==1.6.0
     # via hatchling
