@@ -29,7 +29,7 @@ geopandas==1.1.1
     # via
     #   -c requirements.txt
     #   osmnx
-gunicorn==23.0.0
+gunicorn==24.1.1
     # via
     #   -c requirements.txt
     #   osm-paths (pyproject.toml)
