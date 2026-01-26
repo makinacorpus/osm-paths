@@ -55,7 +55,7 @@ osmnx==2.0.6
     # via
     #   -c requirements.txt
     #   osm-paths (pyproject.toml)
-packaging==25.0
+packaging==26.0
     # via
     #   -c requirements.txt
     #   geopandas
